@@ -1,4 +1,4 @@
-package book.data.service.chapter;
+package book.data.service.model.chapter;
 
 import book.data.service.model.Book;
 import java.util.Objects;

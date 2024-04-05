@@ -1,4 +1,4 @@
-package book.data.service.chapter;
+package book.data.service.model.chapter;
 
 import java.io.Serializable;
 import java.util.Objects;

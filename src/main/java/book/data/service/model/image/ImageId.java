@@ -1,6 +1,6 @@
-package book.data.service.image;
+package book.data.service.model.image;
 
-import book.data.service.chapter.Chapter;
+import book.data.service.model.chapter.Chapter;
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.FetchType;
