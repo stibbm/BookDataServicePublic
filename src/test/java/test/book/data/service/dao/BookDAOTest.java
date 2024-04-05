@@ -1,4 +1,4 @@
-package test.dao.book.data.service.dao;
+package test.book.data.service.dao;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;

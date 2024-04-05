@@ -1,11 +1,9 @@
-package test.dao.book.data.service.dao;
+package test.book.data.service.dao;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
-import static test.dao.book.data.service.dao.BookDAOTest.CREATED_BY_ONE;
-import static test.dao.book.data.service.dao.BookDAOTest.CREATED_BY_TWO;
 
 import book.data.service.dao.chapter.ChapterDAO;
 import book.data.service.exception.BookDoesNotExistException;
@@ -42,14 +40,14 @@ public class ChapterDAOTest {
             CHAPTER_ID_ONE,
             CHAPTER_NAME_ONE,
             CHAPTER_VIEWS_ONE,
-            CREATED_BY_ONE
+            BookDAOTest.CREATED_BY_ONE
         );
     public static final Chapter CHAPTER_TWO =
         new Chapter(
             CHAPTER_ID_TWO,
             CHAPTER_NAME_TWO,
             CHAPTER_VIEWS_TWO,
-            CREATED_BY_TWO
+            BookDAOTest.CREATED_BY_TWO
         );
     public static final List<Chapter> CHAPTER_LIST =
         ImmutableList.of(CHAPTER_ONE, CHAPTER_TWO);
@@ -82,28 +80,28 @@ public class ChapterDAOTest {
         when(chapterRepository.findChaptersByBookNamePaged(anyString(), any(PageRequest.class)))
             .thenReturn(CHAPTER_LIST);
         List<Chapter> chaptersList = chapterDAO.getChaptersByBookNamePaged(BookDAOTest.BOOK_NAME,
-            BookDAOTest.PAGE_NUMBER, BookDAOTest.PAGE_SIZE, CREATED_BY_ONE);
+            BookDAOTest.PAGE_NUMBER, BookDAOTest.PAGE_SIZE, BookDAOTest.CREATED_BY_ONE);
         Assertions.assertThat(chaptersList).isEqualTo(CHAPTER_LIST);
     }
 
     @Test
     public void testGetChaptersByBookNamePaged_BookDoesNotExistException() {
-        when(bookRepository.doesBookExist(BookDAOTest.BOOK_NAME, CREATED_BY_ONE)).thenReturn(false);
+        when(bookRepository.doesBookExist(BookDAOTest.BOOK_NAME, BookDAOTest.CREATED_BY_ONE)).thenReturn(false);
         Assert.assertThrows(BookDoesNotExistException.class, () -> {
             chapterDAO.getChaptersByBookNamePaged(
                 BookDAOTest.BOOK_NAME,
                 BookDAOTest.PAGE_NUMBER,
                 BookDAOTest.PAGE_SIZE,
-                CREATED_BY_ONE
+                BookDAOTest.CREATED_BY_ONE
             );
         });
     }
 
     @Test
     public void testGetChapterByBookNameAndChapterNumber() {
-        when(bookRepository.doesBookExist(BookDAOTest.BOOK_NAME, CREATED_BY_ONE)).thenReturn(true);
+        when(bookRepository.doesBookExist(BookDAOTest.BOOK_NAME, BookDAOTest.CREATED_BY_ONE)).thenReturn(true);
         when(chapterRepository.doesChapterExist(BookDAOTest.BOOK_NAME, CHAPTER_NUMBER_ONE,
-            CREATED_BY_ONE)).thenReturn(true);
+            BookDAOTest.CREATED_BY_ONE)).thenReturn(true);
         when(chapterRepository.findChapterByBookNameAndChapterNumber(
             anyString(),
             anyLong(),
@@ -112,48 +110,48 @@ public class ChapterDAOTest {
         Chapter chapter = chapterDAO.getChapterByBookNameAndChapterNumber(
             BookDAOTest.BOOK_NAME,
             CHAPTER_NUMBER_ONE,
-            CREATED_BY_ONE
+            BookDAOTest.CREATED_BY_ONE
         );
         Assertions.assertThat(CHAPTER_ONE).isEqualTo(chapter);
     }
 
     @Test
     public void testGetChapterByBookNameAndChapterName_BookDoesNotExistException() {
-        when(bookRepository.doesBookExist(BookDAOTest.BOOK_NAME, CREATED_BY_ONE)).thenReturn(false);
+        when(bookRepository.doesBookExist(BookDAOTest.BOOK_NAME, BookDAOTest.CREATED_BY_ONE)).thenReturn(false);
         Assert.assertThrows(BookDoesNotExistException.class, () -> {
             chapterDAO.getChapterByBookNameAndChapterNumber(
                 BookDAOTest.BOOK_NAME,
                 CHAPTER_NUMBER_ONE,
-                CREATED_BY_ONE
+                BookDAOTest.CREATED_BY_ONE
             );
         });
     }
 
     @Test
     public void testGetChapterByBookNameAndChapterName_ChapterDoesNotExistException() {
-        when(bookRepository.doesBookExist(BookDAOTest.BOOK_NAME, CREATED_BY_ONE)).thenReturn(true);
+        when(bookRepository.doesBookExist(BookDAOTest.BOOK_NAME, BookDAOTest.CREATED_BY_ONE)).thenReturn(true);
         when(chapterRepository.doesChapterExist(BookDAOTest.BOOK_NAME, CHAPTER_NUMBER_ONE,
-            CREATED_BY_ONE)).thenReturn(false);
+            BookDAOTest.CREATED_BY_ONE)).thenReturn(false);
         Assert.assertThrows(ChapterDoesNotExistException.class, () -> {
             chapterDAO.getChapterByBookNameAndChapterNumber(
                 BookDAOTest.BOOK_NAME,
                 CHAPTER_NUMBER_ONE,
-                CREATED_BY_ONE
+                BookDAOTest.CREATED_BY_ONE
             );
         });
     }
 
     @Test
     public void testCreateChapter() {
-        when(bookRepository.doesBookExist(BookDAOTest.BOOK_NAME, CREATED_BY_ONE)).thenReturn(true);
+        when(bookRepository.doesBookExist(BookDAOTest.BOOK_NAME, BookDAOTest.CREATED_BY_ONE)).thenReturn(true);
         when(chapterRepository.doesChapterExist(BookDAOTest.BOOK_NAME, CHAPTER_NUMBER_ONE,
-            CREATED_BY_ONE)).thenReturn(false);
+            BookDAOTest.CREATED_BY_ONE)).thenReturn(false);
         Chapter chapter = chapterDAO.createChapter(
             BookDAOTest.BOOK_ONE,
             CHAPTER_NUMBER_ONE,
             CHAPTER_NAME_ONE,
             CHAPTER_VIEWS_ONE,
-            CREATED_BY_ONE
+            BookDAOTest.CREATED_BY_ONE
         );
         Assertions.assertThat(chapter).isEqualTo(CHAPTER_ONE);
     }

@@ -1,14 +1,14 @@
-package test.dao.book.data.service.dao;
+package test.book.data.service.dao;
 
 import static org.mockito.Mockito.when;
-import static test.dao.book.data.service.dao.BookDAOTest.BOOK_NAME;
-import static test.dao.book.data.service.dao.BookDAOTest.CREATED_BY_ONE;
-import static test.dao.book.data.service.dao.BookDAOTest.CREATED_BY_TWO;
-import static test.dao.book.data.service.dao.BookDAOTest.PAGE_NUMBER;
-import static test.dao.book.data.service.dao.BookDAOTest.PAGE_SIZE;
-import static test.dao.book.data.service.dao.ChapterDAOTest.CHAPTER_NUMBER_ONE;
-import static test.dao.book.data.service.dao.ChapterDAOTest.CHAPTER_ONE;
-import static test.dao.book.data.service.dao.ChapterDAOTest.CHAPTER_TWO;
+import static test.book.data.service.dao.BookDAOTest.BOOK_NAME;
+import static test.book.data.service.dao.BookDAOTest.CREATED_BY_ONE;
+import static test.book.data.service.dao.BookDAOTest.CREATED_BY_TWO;
+import static test.book.data.service.dao.BookDAOTest.PAGE_NUMBER;
+import static test.book.data.service.dao.BookDAOTest.PAGE_SIZE;
+import static test.book.data.service.dao.ChapterDAOTest.CHAPTER_NUMBER_ONE;
+import static test.book.data.service.dao.ChapterDAOTest.CHAPTER_ONE;
+import static test.book.data.service.dao.ChapterDAOTest.CHAPTER_TWO;
 
 import book.data.service.dao.image.ImageDAO;
 import book.data.service.exception.BookDoesNotExistException;
