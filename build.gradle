@@ -117,7 +117,3 @@ dependencies {
     implementation 'javassist:javassist:3.12.1.GA'
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.13.0'
 }
-
-test {
-    useJUnitPlatform()
-}
