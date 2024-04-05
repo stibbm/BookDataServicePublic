@@ -1,12 +1,12 @@
 package book.data.service.message.book;
 
+import book.data.service.model.Book;
 import java.io.Serializable;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import matt.book.data.service.sqlmodel.book.Book;
 
 @Data
 @Builder
