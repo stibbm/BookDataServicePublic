@@ -1,34 +1,5 @@
 
-# Create Book
-* Required Fields:
 
-  * Book Name
-  * Description
-  * Tags
-  * Language
-  * Thumbnail Image
-
-# Create Chapter
-* Chapters can be either:
-
-  * Numbered Image Files
-  * Text
-
-
-# Example Flow Shown in Video
-  
-1. Click create book -> Routes to book create page
-2. Specify book info and click create -> Create book and route to newly created book page
-3. Click add chapter -> Routes to add chapter page
-4. Select image type chapter, select numbered images, click create chapter -> Show image upload progress until completed
-5. Click continue button -> Routed to newly created image chapter page
-6. Click add chapter -> Routes to add chapter page
-7. Select text type chapter, fill fields, click create chapter -> Once chapter is created continue button will appear
-8. Click continue button -> Routes to created chapter
-9. Click read first chapter button -> Routes to first chapter
-10. Click read last chapter button -> Routes to last chapter
- 
-https://github.com/stibbm/BookDataServiceSQL/assets/48364517/36601998-9836-4fec-9a89-58c705850fd7
 
 
 # Database Models
@@ -86,6 +57,43 @@ https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44
 
 
 ## Version 1
+
+# Create Book
+* Required Fields:
+
+  * Book Name
+  * Description
+  * Tags
+  * Language
+  * Thumbnail Image
+
+# Create Chapter
+* Chapters can be either:
+
+  * Image Type
+     * Chapter Name
+     * File picker select numbered images
+  
+  * Text Type
+     * Chapter Name
+     * Text
+
+# Create Book Flow
+  
+1. Click create book -> Routes to book create page
+2. Specify book info and click create -> Create book and route to newly created book page
+3. Click add chapter -> Routes to add chapter page
+4. Select image type chapter, select numbered images, click create chapter -> Show image upload progress until completed
+5. Click continue button -> Routed to newly created image chapter page
+6. Click add chapter -> Routes to add chapter page
+7. Select text type chapter, fill fields, click create chapter -> Once chapter is created continue button will appear
+8. Click continue button -> Routes to created chapter
+9. Click read first chapter button -> Routes to first chapter created
+10. Click read last chapter button -> Routes to most recent chapter created
+ 
+https://github.com/stibbm/BookDataServiceSQL/assets/48364517/36601998-9836-4fec-9a89-58c705850fd7
+
+
 1. Create text chapter in Korean
 3. Generate english translation
 4. Generate audio file reading translation aloud  
