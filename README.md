@@ -53,6 +53,17 @@ Long bookNumber
 
 https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44f0-b024-ffecb6f30323
 
+## Generate audiobook for specified range of chapters from admin-created available untranslated chapters flow
+1. Click on generate video for specified chapters -> Popup chapter selection
+2. Specify start and end chapters, click submit -> display process of creating translated audiobook showing when each step completes
+     * Translating Text
+     * Creating Audio
+     * Creating Video
+     * Uploading to Youtube
+     * Completed
+  
+https://github.com/stibbm/BookDataServiceSQL/assets/48364517/47fde2dc-7687-4110-aa3a-ac1d9bc660cb
+
 ## Generate audiobook in english from admin-created available untranslated chapters flow
 1. Click on generate next video button -> Confirm purchase popup button
 2. Click on yes -> display process of creating translated audiobook showing when each step completes
