@@ -93,6 +93,13 @@ https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44
  
 https://github.com/stibbm/BookDataServiceSQL/assets/48364517/36601998-9836-4fec-9a89-58c705850fd7
 
+# Translate text chapter then create audiobook for translation flow
+-> Starting from created text chapter page
+1. Click translate chapter button -> Route to create chapter translation page
+2. Specify language to translate to and name for the translated chapter, click submit -> Display spinwheel loader until completed, then route to the created translated chapter page
+3. Click generate audio button -> button updates showing process has started. Once completed, page updates to contain audio player for the generated audio and a download button
+
+https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-a396-3e479fa65112
 
 1. Create text chapter in Korean
 3. Generate english translation
