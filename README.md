@@ -44,9 +44,7 @@ Long bookNumber
 
   
 
-
-# Demo:
-## Version 2
+# Version 2
 1. Books with existing untranslated chapters are listed.
 2. User can add tokens to account to pay for generating next video
 3. Generated video is auto-uploaded to youtube channel: (https://www.youtube.com/channel/UCXPGNL-A07Tgrd4N-7cB1Aw) and saved to S3 as a backup since youtube api limit for video uploads is very small.
@@ -56,9 +54,9 @@ https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44
 
 
 
-## Version 1
+# Version 1
 
-# Create Book
+## Create Book
 * Required Fields:
 
   * Book Name
@@ -67,7 +65,7 @@ https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44
   * Language
   * Thumbnail Image
 
-# Create Chapter
+## Create Chapter
 * Chapters can be either:
 
   * Image Type
@@ -78,7 +76,7 @@ https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44
      * Chapter Name
      * Text
 
-# Create Book Flow
+## Create Book Flow
   
 1. Click create book -> Routes to book create page
 2. Specify book info and click create -> Create book and route to newly created book page
@@ -93,7 +91,7 @@ https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44
  
 https://github.com/stibbm/BookDataServiceSQL/assets/48364517/36601998-9836-4fec-9a89-58c705850fd7
 
-# Translate text chapter then create audiobook for translation flow
+## Translate text chapter then create audiobook for translation flow
 -> Starting from created text chapter page
 1. Click translate chapter button -> Route to create chapter translation page
 2. Specify language to translate to and name for the translated chapter, click submit -> Display spinwheel loader until completed, then route to the created translated chapter page
