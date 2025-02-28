@@ -1,4 +1,47 @@
 
+# Database Models
+## Book
+@Id  
+Long bookNumber  
+  
+String bookName  
+String createdBy  
+String bookDescription  
+String bookLanguage  
+Long bookViews  
+String bookThumbnail  
+Set<String> bookTags  
+
+
+## Chapter
+@Id  
+ChapterId chapterId  
+
+String chapterName  
+Long chapterViews  
+String createdBy  
+
+### ChapterId
+Long chapterNumber;  
+Long bookNumber;  
+
+## Image
+@Id  
+ImageId imageId  
+  
+String s3Key  
+String s3Bucket  
+String relativeImageUrl  
+String createdBy  
+
+### ImageId
+Long imageNumber  
+Long chapterNumber  
+Long bookNumber  
+
+  
+
+
 # Demo:
 ## Version 2
 1. Books with existing untranslated chapters are listed.
