@@ -5,7 +5,7 @@
 1. Books with existing untranslated chapters are listed.
 2. User can add tokens to account to pay for generating next video
 3. Generated video is auto-uploaded to youtube channel: (https://www.youtube.com/channel/UCXPGNL-A07Tgrd4N-7cB1Aw) and saved to S3 as a backup since youtube api limit for video uploads is very small.
-
+* Note: Youtube channel is no longer up due to copyright strikes
 
 https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44f0-b024-ffecb6f30323
 
