@@ -85,8 +85,8 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-
 
 </details>
 
-<details>
-<summary><strong>How to run</strong></summary>
+
+### How to run
 1. clone BookDataServiceSQL
    * Run "docker-compose up" in d2/d2 directory
    * Run "gradle bootRun" in base directory of repo
@@ -99,7 +99,6 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-
    * Run "python3 m.py" to autopopulate backend data
      * Populates data for existing videos in specified playlists for connected youtube account
      * Populates data for which chapters remain unstranslated and are available to generate videos for
-</details>
 
 ## Endpoints
 ### CreateBookActivity
