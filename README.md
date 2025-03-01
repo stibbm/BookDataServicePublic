@@ -108,6 +108,30 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-
 * byte[] bookThumbnailImageBytes;
 * String fileType;
 <br/>
+
+### 1. ** Create Book **
+
+**Endpoint**: `POST /createBook`  
+**Description**: Create a new book
+
+<details>
+<summary>Request</summary>
+
+- **Headers**  
+  - `Content-Type: application/json`
+  - `Authorization: <authToken>`
+
+- **Body**
+    ```json
+    {
+      "bookName": "wizard tower",
+      "bookDescription": "book description",
+      "bookLanguage": "Korean",
+      "bookTags": ["tag1", "tag2"],
+      "fileType": "png"
+    }
+    ```
+</details>
   
 ### GetAllBooksPagedActivity
 #### GetAllBooksPagedRequest
