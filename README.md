@@ -116,9 +116,6 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-
 **Endpoint**: `POST /createBook`  
 **Description**: Create a new book
 
-<details>
-<summary>Request</summary>
-
 - **Headers**  
   - `Content-Type: application/json`
   - `Authorization: <authToken>`
@@ -133,7 +130,6 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-
       "fileType": "png"
     }
     ```
-</details>
   
 ### GetAllBooksPagedActivity
 #### GetAllBooksPagedRequest
