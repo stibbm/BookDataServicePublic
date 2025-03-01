@@ -1,6 +1,6 @@
 
-
-# Version 2
+<details>
+<summary><strong>Version 2</strong></summary>
 
 1. Books with existing untranslated chapters are listed.
 2. User can add tokens to account to pay for generating next video
@@ -30,8 +30,10 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/47fde2dc-7687-4110-
      * Completed
 
 https://github.com/stibbm/BookDataServiceSQL/assets/48364517/971740b7-38d4-40ab-a6e3-0b8e1f1bad1a
+</details>
 
-# Version 1
+<details>
+<summary><strong>Version 1</strong></summary>
 
 ## Create Book
 * Required Fields:
@@ -81,9 +83,10 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-
 4. Generate audio file reading translation aloud  
 5. Generate video file reading translation aloud with book thumbnail as background
 
+</details>
 
-
-# How to run:
+<details>
+<summary><strong>How to run</strong></summary>
 1. clone BookDataServiceSQL
    * Run "docker-compose up" in d2/d2 directory
    * Run "gradle bootRun" in base directory of repo
@@ -96,7 +99,7 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-
    * Run "python3 m.py" to autopopulate backend data
      * Populates data for existing videos in specified playlists for connected youtube account
      * Populates data for which chapters remain unstranslated and are available to generate videos for
-
+</details>
 
 ## Endpoints
 ### CreateBookActivity
