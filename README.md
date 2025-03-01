@@ -97,6 +97,43 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-
      * Populates data for existing videos in specified playlists for connected youtube account
      * Populates data for which chapters remain unstranslated and are available to generate videos for
 
+
+## Endpoints
+### CreateBookActivity
+#### CreateBookRequest 
+* String bookName
+* String bookDescription
+* String bookLanguage
+* Set<String> bookTags
+* byte[] bookThumbnailImageBytes;
+* String fileType;
+<br/>
+  
+### GetAllBooksPagedActivity
+#### GetAllBooksPagedRequest
+-- Note: being passed as strings and parsed into integer so any formatting errors in values don't cause an error from spring boot and can be handled within this code
+* String pageNumber
+* String pageSize
+<br/>
+  
+### GetAllBooksSortedPagedActivity
+#### GetAllBooksSortedPagedRequest
+* String sortType (BOOK_VIEWS, CREATION_TIME, BOOK_NAME)
+* String pageNumber
+* String pageSize
+<br/>
+  
+### GetBookByNameActivity
+#### GetBookByNameRequest
+* String bookName
+<br/>
+
+  
+### GetBookByBookNumberActivity
+#### GetBookByBookNumberRequest
+* Long bookNumber
+<br/>
+  
 # Database Models
 ## Book
 @Id  
