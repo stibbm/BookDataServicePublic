@@ -1,58 +1,4 @@
-How to run:
-1. clone BookDataServiceSQL
-   * Run "docker-compose up" in d2/d2 directory
-   * Run "gradle bootRun" in base directory of repo
-2. clone BookPageContent
-   * Run "gradle bootRun" in base directory of repo
-3. clone book-client-sql
-   * Run "npm install"
-   * Run "npm run start"
-4. clone bookpy
-   * Run "python3 m.py" to autopopulate backend data
-     * Populates data for existing videos in specified playlists for connected youtube account
-     * Populates data for which chapters remain unstranslated and are available to generate videos for
 
-# Database Models
-## Book
-@Id  
-Long bookNumber  
-  
-String bookName  
-String createdBy  
-String bookDescription  
-String bookLanguage  
-Long bookViews  
-String bookThumbnail  
-Set<String> bookTags  
-
-
-## Chapter
-@Id  
-ChapterId chapterId  
-
-String chapterName  
-Long chapterViews  
-String createdBy  
-
-### ChapterId
-Long chapterNumber;  
-Long bookNumber;  
-
-## Image
-@Id  
-ImageId imageId  
-  
-String s3Key  
-String s3Bucket  
-String relativeImageUrl  
-String createdBy  
-
-### ImageId
-Long imageNumber  
-Long chapterNumber  
-Long bookNumber  
-
-  
 
 # Version 2
 
@@ -134,6 +80,67 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-
 3. Generate english translation
 4. Generate audio file reading translation aloud  
 5. Generate video file reading translation aloud with book thumbnail as background
+
+
+
+# How to run:
+1. clone BookDataServiceSQL
+   * Run "docker-compose up" in d2/d2 directory
+   * Run "gradle bootRun" in base directory of repo
+2. clone BookPageContent
+   * Run "gradle bootRun" in base directory of repo
+3. clone book-client-sql
+   * Run "npm install"
+   * Run "npm run start"
+4. clone bookpy
+   * Run "python3 m.py" to autopopulate backend data
+     * Populates data for existing videos in specified playlists for connected youtube account
+     * Populates data for which chapters remain unstranslated and are available to generate videos for
+
+# Database Models
+## Book
+@Id  
+Long bookNumber  
+  
+String bookName  
+String createdBy  
+String bookDescription  
+String bookLanguage  
+Long bookViews  
+String bookThumbnail  
+Set<String> bookTags  
+
+
+## Chapter
+@Id  
+ChapterId chapterId  
+
+String chapterName  
+Long chapterViews  
+String createdBy  
+
+### ChapterId
+Long chapterNumber;  
+Long bookNumber;  
+
+## Image
+@Id  
+ImageId imageId  
+  
+String s3Key  
+String s3Bucket  
+String relativeImageUrl  
+String createdBy  
+
+### ImageId
+Long imageNumber  
+Long chapterNumber  
+Long bookNumber  
+
+  
+
+
+
 
 https://github.com/stibbm/MAWNR-Translations/assets/48364517/9c91ba0c-948f-4702-8d86-3bfe028a2034
 
