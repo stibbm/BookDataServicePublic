@@ -55,14 +55,9 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/971740b7-38d4-40ab-
      * Chapter Name
      * Text
 
-<details>
-
-<summary>
 
 ## Create Book Flow
 
-</summary>
- 
 https://github.com/stibbm/BookDataServiceSQL/assets/48364517/36601998-9836-4fec-9a89-58c705850fd7
 
 1. Click create book -> Routes to book create page
@@ -76,15 +71,9 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/36601998-9836-4fec-
 9. Click read first chapter button -> Routes to first chapter created
 10. Click read last chapter button -> Routes to most recent chapter created
 
-</details>
-
-<details>
-
-<summary>
 
 ## Translate Text Chapter Flow
 
-</summary>
 
 https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-a396-3e479fa65112
 
@@ -94,8 +83,6 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-
 3. Click generate audio button -> button updates showing process has started. Once completed, page updates to contain audio player for the generated audio and a download button
 
 
-
-</details>
 
 1. Create text chapter in Korean
 3. Generate english translation
