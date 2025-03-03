@@ -1,6 +1,6 @@
 
 <details>
-<summary><strong>Version 2</strong></summary>
+<summary><strong>Version 2 (Click to expand)</strong></summary>
 
 1. Books with existing untranslated chapters are listed.
 2. User can add tokens to account to pay for generating next video
@@ -33,7 +33,7 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/971740b7-38d4-40ab-
 </details>
 
 <details>
-<summary><strong>Version 1</strong></summary>
+<summary><strong>Version 1 (Click to expand)</strong></summary>
 
 ## Create Book
 * Required Fields:
