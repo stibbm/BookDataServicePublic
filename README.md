@@ -11,9 +11,8 @@ stripe listen --forward-to localhost:9190/stripeWebhooks
 ```
 
 ------
-**BookDataServiceSQL**
 
-***Docker DB Generation***
+**How to setup database first time**
 
 1. Run "docker-compose up"
 2. Set spring.jpa.hibernate.ddl-auto=create in application.properties
