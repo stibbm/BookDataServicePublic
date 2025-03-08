@@ -85,8 +85,6 @@ https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-
 4. Generate audio file reading translation aloud  
 5. Generate video file reading translation aloud with book thumbnail as background
 
-</details>
-
 
 ### How to run
 1. clone BookDataServiceSQL
