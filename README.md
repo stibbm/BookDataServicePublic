@@ -1,12 +1,4 @@
-# Version 2
-
-1. Books with existing untranslated chapters are listed.
-2. User can add tokens to account to pay for generating next video
-3. Generated video is auto-uploaded to youtube channel: (https://www.youtube.com/channel/UCXPGNL-A07Tgrd4N-7cB1Aw) and saved to S3 as a backup since youtube api limit for video uploads is very small.
-* Note: Youtube channel is no longer up due to copyright strikes
-
-https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44f0-b024-ffecb6f30323
-
+# Book Data Service
 
 
 ## How to run full service and site
@@ -18,18 +10,35 @@ stripe login
 stripe listen --forward-to localhost:9190/stripeWebhooks
 ```
 
+------
 **BookDataServiceSQL**
+
+***Docker DB Generation***
+
+1. Run "docker-compose up"
+2. Set spring.jpa.hibernate.ddl-auto=create in application.properties
+3. Run "gradle bootRun" (Error messages will appear but it will run)
+4. ctrl-c kill the run
+5. Set spring.jpa.hibernate.ddl-auto=update in application.properties
+6. Run "gradle bootRun"
+7. DB is now setup correctly
+
+
+***Terminal 1***
 ```
 git clone git@github.com:stibbm/BookDataServiceSQL
-** Terminal 1 **
 cd BookDataServiceSQL
 cd d2/d2
 docker-compose up
--------------
-** Terminal 2 **
+```
+
+***Terminal 2***
+```
 cd BookDataServiceSQL
 gradle bootRun
 ```
+
+-------
 
 **BookPageContent**
 ```
@@ -46,6 +55,19 @@ cd book-client-sql
 npm install
 npm run start
 ```
+
+
+
+
+
+# Version 2
+
+1. Books with existing untranslated chapters are listed.
+2. User can add tokens to account to pay for generating next video
+3. Generated video is auto-uploaded to youtube channel: (https://www.youtube.com/channel/UCXPGNL-A07Tgrd4N-7cB1Aw) and saved to S3 as a backup since youtube api limit for video uploads is very small.
+* Note: Youtube channel is no longer up due to copyright strikes
+
+https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44f0-b024-ffecb6f30323
 
 
 ## Generate audiobook for specified range of chapters from admin-created available untranslated chapters flow
