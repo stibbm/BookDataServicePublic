@@ -15,7 +15,7 @@ https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44
 ```
 brew install stripe/stripe-cli/stripe
 stripe login
-stripe listen --forward-to localhost:4242/webhook
+stripe listen --forward-to localhost:9190/stripeWebhooks
 ```
 
 **BookDataServiceSQL**
