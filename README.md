@@ -7,6 +7,47 @@
 
 https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44f0-b024-ffecb6f30323
 
+
+
+## How to run full service and site
+
+**Start Local Stripe webhook**
+```
+brew install stripe/stripe-cli/stripe
+stripe login
+stripe listen --forward-to localhost:4242/webhook
+```
+
+**BookDataServiceSQL**
+```
+git clone git@github.com:stibbm/BookDataServiceSQL
+** Terminal 1 **
+cd BookDataServiceSQL
+cd d2/d2
+docker-compose up
+-------------
+** Terminal 2 **
+cd BookDataServiceSQL
+gradle bootRun
+```
+
+**BookPageContent**
+```
+git clone git@github.com:stibbm/BookPageContent
+** Terminal 1 **
+cd BookPageContent
+gradle bootRun
+```
+
+**book-client-sql**
+```
+git clone git@github.com:stibbm/book-client-sql
+cd book-client-sql
+npm install
+npm run start
+```
+
+
 ## Generate audiobook for specified range of chapters from admin-created available untranslated chapters flow
 1. Click on generate video for specified chapters -> Popup chapter selection
 2. Specify start and end chapters, click submit -> display process of creating translated audiobook showing when each step completes
