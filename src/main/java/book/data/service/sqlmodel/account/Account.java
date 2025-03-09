@@ -1,4 +1,4 @@
-package book.data.service.sqlmodel;
+package book.data.service.sqlmodel.account;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
