@@ -15,6 +15,8 @@ public class Routes {
         "/getImagesByBookNameAndChapterNumberPaged";
     public static final String GET_IMAGE_BY_BOOK_NAME_AND_CHAPTER_NUMBER_AND_IMAGE_NUMBER =
         "/getImageByBookNameAndChapterAndChapterNumberAndImageNumber";
+	public static final String DELETE_BOOK_BY_NAME = "/deleteBookByName";
+	public static final String 
 
     public static final String ALL_ORIGINS = "*";
     public static final Gson GSON = new Gson();
