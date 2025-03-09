@@ -1,5 +1,46 @@
 # Book Data Service
 
+## Activity Endpoints
+
+### Account
+- CreateAccount
+- GetAccount
+
+### Audio
+- CreateAudio
+- GetAudiosByBookNameAndChapterNumber
+
+### Book
+- CreateBook
+- DeleteBook
+- GetAllBooksPaged
+- GetAllBooksSortedPaged
+- GetBookByBookName
+- GetBookByBookNumber
+- GetBooksByBookTagPaged
+- SearchBooksByBookTags
+- SearchBooksByContent
+
+### BookView
+- CreateBookView
+- GetBookViewsByBookNumber
+
+### Chapter
+- CreateChapter
+- GetChapterByBookNameAndChapterNumber
+- GetChapterHeadersByBookNumber
+- GetChaptersByBookName
+- GetChaptersByBookNamePaged
+
+### Image
+- CreateImage
+- GetImagesByBookNameAndChapterNameAndImageNumber
+- GetImagesByBookNameAndChapterNumberPaged
+
+### Populate
+- PopulateGitBooks
+- PopulateVideoData
+
 
 ## How to run full service and site
 
