@@ -116,4 +116,11 @@ dependencies {
     implementation 'org.apache.pdfbox:pdfbox:2.0.1'
     implementation 'javassist:javassist:3.12.1.GA'
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.13.0'
+
+    // youtube api deps
+    implementation 'com.google.http-client:google-http-client-jackson2:1.42.0'
+    implementation 'com.google.apis:google-api-services-youtube:v3-rev222-1.25.0'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.32.1'
+    implementation 'com.google.api-client:google-api-client:1.32.1'
+
 }
