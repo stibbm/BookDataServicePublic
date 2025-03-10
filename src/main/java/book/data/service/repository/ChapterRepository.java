@@ -1,11 +1,12 @@
 package book.data.service.repository;
 
-import book.data.service.model.chapter.Chapter;
 import java.util.List;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
+import book.data.service.sqlmodel.chapter.Chapter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Repository;

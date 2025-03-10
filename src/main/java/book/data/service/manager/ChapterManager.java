@@ -5,8 +5,10 @@ import book.data.service.dao.chapter.ChapterDAO;
 import book.data.service.exception.BookDoesNotExistException;
 import book.data.service.exception.ChapterAlreadyExistsException;
 import book.data.service.exception.ChapterDoesNotExistException;
-import book.data.service.model.chapter.Chapter;
 import java.util.List;
+
+import book.data.service.sqlmodel.book.Book;
+import book.data.service.sqlmodel.chapter.Chapter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

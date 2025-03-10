@@ -67,7 +67,7 @@ public class ImageId implements Serializable {
     public JSONObject getJson() {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("imageNumber", imageNumber);
-        jsonObject.put("chapter", chapter.getJson());
+        jsonObject.put("chapter", chapter.toString());
         return jsonObject;
     }
 
