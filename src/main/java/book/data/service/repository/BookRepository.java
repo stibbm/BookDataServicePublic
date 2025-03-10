@@ -1,6 +1,5 @@
 package book.data.service.repository;
 
-import book.data.service.model.Book;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

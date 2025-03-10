@@ -1,6 +1,6 @@
 package book.data.service.repository;
 
-import book.data.service.model.image.Image;
+import book.data.service.sqlmodel.image.Image;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

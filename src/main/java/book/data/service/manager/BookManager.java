@@ -3,7 +3,7 @@ package book.data.service.manager;
 import book.data.service.dao.book.BookDAO;
 import book.data.service.exception.BookAlreadyExistsException;
 import book.data.service.exception.BookDoesNotExistException;
-import book.data.service.model.Book;
+
 import java.util.List;
 import java.util.Set;
 import lombok.extern.slf4j.Slf4j;

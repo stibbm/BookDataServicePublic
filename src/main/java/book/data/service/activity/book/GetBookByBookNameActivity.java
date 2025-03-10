@@ -7,7 +7,6 @@ import book.data.service.firebase.FirebaseService;
 import book.data.service.manager.BookManager;
 import book.data.service.message.book.GetBookByBookNameRequest;
 import book.data.service.message.book.GetBookByBookNameResponse;
-import book.data.service.model.Book;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

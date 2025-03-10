@@ -7,7 +7,6 @@ import static org.mockito.Mockito.when;
 import book.data.service.dao.book.BookDAO;
 import book.data.service.exception.BookAlreadyExistsException;
 import book.data.service.exception.BookDoesNotExistException;
-import book.data.service.model.Book;
 import book.data.service.repository.BookRepository;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;

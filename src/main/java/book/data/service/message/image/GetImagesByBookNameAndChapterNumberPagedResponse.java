@@ -1,6 +1,6 @@
 package book.data.service.message.image;
 
-import book.data.service.model.image.Image;
+import book.data.service.sqlmodel.image.Image;
 import java.io.Serializable;
 import java.util.List;
 import lombok.AllArgsConstructor;

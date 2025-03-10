@@ -1,5 +1,9 @@
 package book.data.service.activity.account;
 
+import book.data.service.firebase.FirebaseService;
+import book.data.service.manager.AccountManager;
+import book.data.service.message.account.CreateAccountRequest;
+import book.data.service.message.account.CreateAccountResponse;
 import book.data.service.sqlmodel.account.Account;
 import com.stripe.exception.StripeException;
 import lombok.extern.slf4j.Slf4j;
@@ -7,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import static book.data.service.constants.Routes.ALL_ORIGINS;
+import static book.data.service.constants.Routes.CREATE_ACCOUNT;
 
 @Slf4j
 @RestController

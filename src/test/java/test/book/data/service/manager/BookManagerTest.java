@@ -21,7 +21,7 @@ import book.data.service.dao.book.BookDAO;
 import book.data.service.exception.BookAlreadyExistsException;
 import book.data.service.exception.BookDoesNotExistException;
 import book.data.service.manager.BookManager;
-import book.data.service.model.Book;
+
 import java.util.List;
 import org.assertj.core.api.Assertions;
 import org.junit.Assert;

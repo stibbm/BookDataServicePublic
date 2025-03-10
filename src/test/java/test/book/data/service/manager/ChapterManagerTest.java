@@ -23,7 +23,6 @@ import book.data.service.exception.BookDoesNotExistException;
 import book.data.service.exception.ChapterAlreadyExistsException;
 import book.data.service.exception.ChapterDoesNotExistException;
 import book.data.service.manager.ChapterManager;
-import book.data.service.model.Book;
 import book.data.service.model.chapter.Chapter;
 import java.util.List;
 import org.assertj.core.api.Assertions;

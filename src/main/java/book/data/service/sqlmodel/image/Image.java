@@ -1,4 +1,4 @@
-package book.data.service.model.image;
+package book.data.service.sqlmodel.image;
 
 import java.io.Serializable;
 

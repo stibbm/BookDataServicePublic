@@ -5,7 +5,7 @@ import static book.data.service.constants.Routes.GET_ALL_BOOKS_PAGED;
 
 import book.data.service.message.book.GetAllBooksPagedRequest;
 import book.data.service.message.book.GetAllBooksPagedResponse;
-import book.data.service.model.Book;
+
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

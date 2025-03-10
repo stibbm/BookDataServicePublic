@@ -1,6 +1,5 @@
-package book.data.service.model.image;
+package book.data.service.sqlmodel.image;
 
-import book.data.service.model.chapter.Chapter;
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.FetchType;
@@ -9,6 +8,7 @@ import javax.persistence.JoinColumns;
 import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
 
+import book.data.service.sqlmodel.chapter.Chapter;
 import org.json.JSONObject;
 
 @Embeddable

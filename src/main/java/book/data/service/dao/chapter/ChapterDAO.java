@@ -3,7 +3,6 @@ package book.data.service.dao.chapter;
 import book.data.service.exception.BookDoesNotExistException;
 import book.data.service.exception.ChapterAlreadyExistsException;
 import book.data.service.exception.ChapterDoesNotExistException;
-import book.data.service.model.Book;
 import book.data.service.model.chapter.Chapter;
 import book.data.service.model.chapter.ChapterId;
 import book.data.service.repository.BookRepository;

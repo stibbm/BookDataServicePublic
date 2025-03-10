@@ -3,7 +3,7 @@ package book.data.service.manager;
 import book.data.service.dao.chapter.ChapterDAO;
 import book.data.service.dao.image.ImageDAO;
 import book.data.service.model.chapter.Chapter;
-import book.data.service.model.image.Image;
+import book.data.service.sqlmodel.image.Image;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
