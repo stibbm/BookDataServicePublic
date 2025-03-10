@@ -6,6 +6,7 @@ import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
 import com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.util.store.FileDataStoreFactory;
+import com.google.api.services.youtube.YouTube;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
