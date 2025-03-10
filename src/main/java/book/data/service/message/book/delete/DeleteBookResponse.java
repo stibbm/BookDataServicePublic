@@ -1,5 +1,6 @@
 package book.data.service.message.book.delete;
 
+import book.data.service.sqlmodel.book.Book;
 import lombok.Builder;
 
 import java.io.Serializable;

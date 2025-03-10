@@ -4,7 +4,7 @@ import book.data.service.exception.BookDoesNotExistException;
 import book.data.service.exception.ChapterDoesNotExistException;
 import book.data.service.exception.ImageDoesNotExistException;
 import book.data.service.exception.ImageAlreadyExistsException;
-import book.data.service.model.chapter.Chapter;
+import book.data.service.sqlmodel.chapter.Chapter;
 import book.data.service.sqlmodel.image.Image;
 import book.data.service.sqlmodel.image.ImageId;
 import book.data.service.repository.BookRepository;
