@@ -10,6 +10,7 @@ import book.data.service.model.YoutubeVideoInfo;
 import book.data.service.service.file.FileService;
 import book.data.service.sqlmodel.book.Book;
 import book.data.service.sqlmodel.chapter.Chapter;
+import book.data.service.sqlmodel.textblock.TextBlock;
 import book.data.service.sqlmodel.youtubevideo.YouTubeVideo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
