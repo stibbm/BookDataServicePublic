@@ -1,5 +1,6 @@
 package book.data.service.clientwrapper;
 
+import book.data.service.model.StripeCheckoutSession;
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
 import com.stripe.model.Customer;
