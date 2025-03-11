@@ -13,7 +13,7 @@ import static test.book.data.service.dao.ChapterDAOTest.CHAPTER_TWO;
 import book.data.service.dao.image.ImageDAO;
 import book.data.service.exception.book.BookDoesNotExistException;
 import book.data.service.exception.chapter.ChapterDoesNotExistException;
-import book.data.service.exception.ImageAlreadyExistsException;
+import book.data.service.exception.image.ImageAlreadyExistsException;
 import book.data.service.sqlmodel.image.Image;
 import book.data.service.sqlmodel.image.ImageId;
 import book.data.service.repository.BookRepository;
