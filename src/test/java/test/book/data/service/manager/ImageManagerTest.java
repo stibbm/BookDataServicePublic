@@ -16,7 +16,6 @@ import static test.book.data.service.dao.ImageDAOTest.S3_KEY_ONE;
 
 import book.data.service.dao.chapter.ChapterDAO;
 import book.data.service.dao.image.ImageDAO;
-import book.data.service.manager.ImageManager;
 import book.data.service.sqlmodel.image.Image;
 import java.util.List;
 import org.assertj.core.api.Assertions;

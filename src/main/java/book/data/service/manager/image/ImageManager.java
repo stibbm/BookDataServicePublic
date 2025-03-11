@@ -1,16 +1,20 @@
-package book.data.service.manager;
+package book.data.service.manager.image;
 
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
-import java.util.List;
 
+import book.data.service.clientwrapper.S3ClientWrapper;
 import book.data.service.dao.chapter.ChapterDAO;
 import book.data.service.dao.image.ImageDAO;
+import book.data.service.service.id.IdService;
+import book.data.service.service.time.TimeService;
 import book.data.service.sqlmodel.chapter.Chapter;
 import book.data.service.sqlmodel.image.Image;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.util.List;
 
 @Slf4j
 @Component
