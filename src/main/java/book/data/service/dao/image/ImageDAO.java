@@ -2,7 +2,7 @@ package book.data.service.dao.image;
 
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
-import book.data.service.exception.BookDoesNotExistException;
+import book.data.service.exception.book.BookDoesNotExistException;
 import book.data.service.exception.ChapterDoesNotExistException;
 import book.data.service.exception.ImageAlreadyExistsException;
 import book.data.service.exception.ImageDoesNotExistException;
@@ -10,7 +10,6 @@ import book.data.service.repository.BookRepository;
 import book.data.service.repository.ChapterRepository;
 import book.data.service.repository.ImageRepository;
 import book.data.service.sqlmodel.chapter.Chapter;
-import book.data.service.sqlmodel.chapter.LockStatus;
 import book.data.service.sqlmodel.image.Image;
 import book.data.service.sqlmodel.image.ImageId;
 import org.springframework.beans.factory.annotation.Autowired;

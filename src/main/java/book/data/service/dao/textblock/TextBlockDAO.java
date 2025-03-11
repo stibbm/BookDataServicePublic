@@ -1,6 +1,6 @@
 package book.data.service.dao.textblock;
 
-import book.data.service.exception.BookDoesNotExistException;
+import book.data.service.exception.book.BookDoesNotExistException;
 import book.data.service.exception.ChapterDoesNotExistException;
 import book.data.service.factory.TextBlockFactory;
 import book.data.service.repository.BookRepository;
@@ -13,7 +13,6 @@ import book.data.service.sqlmodel.tag.SearchTermFilterType;
 import book.data.service.sqlmodel.textblock.TextBlock;
 import book.data.service.sqlmodel.textblock.TextBlockId;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.List;

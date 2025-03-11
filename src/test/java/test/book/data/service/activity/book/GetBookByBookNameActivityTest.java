@@ -6,7 +6,7 @@ import static test.book.data.service.activity.book.CreateBookActivityTest.AUTH_T
 import static test.book.data.service.dao.BookDAOTest.BOOK_NAME;
 import static test.book.data.service.dao.BookDAOTest.BOOK_ONE;
 import static test.book.data.service.dao.BookDAOTest.CREATED_BY_ONE;
-import book.data.service.exception.BookDoesNotExistException;
+import book.data.service.exception.book.BookDoesNotExistException;
 import book.data.service.activity.GetBookByBookNameActivity;
 import book.data.service.firebase.FirebaseService;
 import book.data.service.message.book.GetBookByBookNameRequest;

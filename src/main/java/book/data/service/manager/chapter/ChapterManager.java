@@ -5,7 +5,7 @@ import java.util.List;
 
 import book.data.service.dao.book.BookDAO;
 import book.data.service.dao.chapter.ChapterDAO;
-import book.data.service.exception.BookDoesNotExistException;
+import book.data.service.exception.book.BookDoesNotExistException;
 import book.data.service.exception.ChapterAlreadyExistsException;
 import book.data.service.exception.ChapterDoesNotExistException;
 import book.data.service.sqlmodel.book.Book;

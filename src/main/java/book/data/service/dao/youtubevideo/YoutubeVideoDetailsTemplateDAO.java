@@ -1,6 +1,6 @@
 package book.data.service.dao.youtubevideo;
 
-import book.data.service.exception.BookDoesNotExistException;
+import book.data.service.exception.book.BookDoesNotExistException;
 import java.util.Set;
 import lombok.extern.slf4j.Slf4j;
 import book.data.service.repository.BookRepository;

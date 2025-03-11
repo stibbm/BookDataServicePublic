@@ -19,7 +19,7 @@ import static test.book.data.service.dao.ChapterDAOTest.CHAPTER_VIEWS_ONE;
 
 import book.data.service.dao.book.BookDAO;
 import book.data.service.dao.chapter.ChapterDAO;
-import book.data.service.exception.BookDoesNotExistException;
+import book.data.service.exception.book.BookDoesNotExistException;
 import book.data.service.exception.ChapterAlreadyExistsException;
 import book.data.service.exception.ChapterDoesNotExistException;
 import book.data.service.manager.chapter.ChapterManager;

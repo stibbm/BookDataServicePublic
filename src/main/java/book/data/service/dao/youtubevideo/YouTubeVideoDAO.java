@@ -1,12 +1,10 @@
 package book.data.service.dao.youtubevideo;
 
-import book.data.service.exception.BookDoesNotExistException;
+import book.data.service.exception.book.BookDoesNotExistException;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
-import book.data.service.exception.book.BookDoesNotExistException;
 import book.data.service.exception.youtubevideo.YouTubeVideoDoesNotExistException;
 import book.data.service.repository.BookRepository;
-import book.data.service.repository.ChapterRepository;
 import book.data.service.repository.YouTubeVideoRepository;
 import book.data.service.sqlmodel.youtubevideo.YouTubeVideo;
 import org.springframework.beans.factory.annotation.Autowired;

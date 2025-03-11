@@ -11,7 +11,7 @@ import static test.book.data.service.dao.ChapterDAOTest.CHAPTER_ONE;
 import static test.book.data.service.dao.ChapterDAOTest.CHAPTER_TWO;
 
 import book.data.service.dao.image.ImageDAO;
-import book.data.service.exception.BookDoesNotExistException;
+import book.data.service.exception.book.BookDoesNotExistException;
 import book.data.service.exception.ChapterDoesNotExistException;
 import book.data.service.exception.ImageAlreadyExistsException;
 import book.data.service.sqlmodel.image.Image;
