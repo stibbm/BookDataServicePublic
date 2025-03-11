@@ -14,7 +14,6 @@ import static test.book.data.service.dao.BookDAOTest.CREATED_BY_ONE;
 import book.data.service.activity.CreateBookActivity;
 import book.data.service.exception.BookAlreadyExistsException;
 import book.data.service.firebase.FirebaseService;
-import book.data.service.manager.BookManager;
 import book.data.service.message.book.CreateBookRequest;
 import book.data.service.message.book.CreateBookResponse;
 import org.assertj.core.api.Assertions;

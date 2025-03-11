@@ -1,7 +1,6 @@
 package book.data.service.activity.book;
 
 import book.data.service.firebase.FirebaseService;
-import book.data.service.manager.BookManager;
 import book.data.service.message.book.delete.DeleteBookRequest;
 import book.data.service.message.book.delete.DeleteBookResponse;
 import book.data.service.sqlmodel.book.Book;

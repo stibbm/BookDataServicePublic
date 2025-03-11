@@ -4,7 +4,6 @@ import static book.data.service.constants.Routes.ALL_ORIGINS;
 import static book.data.service.constants.Routes.GET_BOOK_BY_BOOK_NAME;
 
 import book.data.service.firebase.FirebaseService;
-import book.data.service.manager.BookManager;
 import book.data.service.message.book.GetBookByBookNameRequest;
 import book.data.service.message.book.GetBookByBookNameResponse;
 import lombok.extern.slf4j.Slf4j;

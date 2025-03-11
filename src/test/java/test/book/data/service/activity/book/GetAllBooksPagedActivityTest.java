@@ -9,7 +9,6 @@ import static test.book.data.service.dao.BookDAOTest.PAGE_SIZE;
 
 import book.data.service.activity.GetAllBooksPagedActivity;
 import book.data.service.firebase.FirebaseService;
-import book.data.service.manager.BookManager;
 import book.data.service.message.book.GetAllBooksPagedRequest;
 import book.data.service.message.book.GetAllBooksPagedResponse;
 import org.assertj.core.api.Assertions;

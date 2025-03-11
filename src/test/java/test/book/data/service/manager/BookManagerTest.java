@@ -20,7 +20,6 @@ import static test.book.data.service.dao.BookDAOTest.PAGE_SIZE;
 import book.data.service.dao.book.BookDAO;
 import book.data.service.exception.BookAlreadyExistsException;
 import book.data.service.exception.BookDoesNotExistException;
-import book.data.service.manager.BookManager;
 
 import java.util.List;
 import org.assertj.core.api.Assertions;
