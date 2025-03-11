@@ -3,7 +3,7 @@ package book.data.service.dao.audio;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import book.data.service.exception.book.BookDoesNotExistException;
-import book.data.service.exception.ChapterDoesNotExistException;
+import book.data.service.exception.chapter.ChapterDoesNotExistException;
 import book.data.service.repository.AudioRepository;
 import book.data.service.repository.BookRepository;
 import book.data.service.repository.ChapterRepository;

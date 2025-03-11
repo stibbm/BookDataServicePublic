@@ -3,7 +3,7 @@ package book.data.service.dao.image;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import book.data.service.exception.book.BookDoesNotExistException;
-import book.data.service.exception.ChapterDoesNotExistException;
+import book.data.service.exception.chapter.ChapterDoesNotExistException;
 import book.data.service.exception.ImageAlreadyExistsException;
 import book.data.service.exception.ImageDoesNotExistException;
 import book.data.service.repository.BookRepository;

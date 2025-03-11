@@ -1,7 +1,7 @@
 package book.data.service.dao.chapter;
 
 import book.data.service.exception.book.BookDoesNotExistException;
-import book.data.service.exception.ChapterAlreadyExistsException;
+import book.data.service.exception.chapter.ChapterAlreadyExistsException;
 import book.data.service.repository.BookRepository;
 import book.data.service.repository.ChapterRepository;
 import book.data.service.sqlmodel.book.Book;
