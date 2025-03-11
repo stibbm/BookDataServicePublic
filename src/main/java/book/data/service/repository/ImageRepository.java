@@ -25,7 +25,7 @@ public class ImageRepository {
         String queryString = "SELECT i FROM Image i "
             + "WHERE i.imageId.chapter.chapterId.book.bookName=:bookName AND "
             + "i.imageId.chapter.chapterId.chapterNumber=:chapterNumber AND "
-            + "i.createdBy=:createdBy";
+            + "i.createdBy=:createdBy ORDER BY i.imageId.imageNumber ASC";
         TypedQuery<Image> query = entityManager.createQuery(queryString, Image.class);
         query.setParameter("bookName", bookName);
         query.setParameter("chapterNumber", chapterNumber);
@@ -34,6 +34,14 @@ public class ImageRepository {
         query.setMaxResults(pageRequest.getPageSize());
         List<Image> imageList = query.getResultList();
         return imageList;
+    }
+
+    public List<Image> findImagesByBookNumber(Long bookNumber) {
+        String squery = "SELECT i FROM Image i WHERE i.id.chapter.id.book.bookNumber=:bookNumber";
+        TypedQuery<Image> query = entityManager.createQuery(squery, Image.class);
+        List<Image> resultList = query.setParameter("bookNumber", bookNumber)
+            .getResultList();
+        return resultList;
     }
 
     public Image findImageByBookNameAndChapterNumberAndImageNumber(
