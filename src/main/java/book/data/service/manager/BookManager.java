@@ -1,5 +1,14 @@
 package book.data.service.manager;
 
+import book.data.service.clientwrapper.S3ClientWrapper;
+import book.data.service.constants.BookSortTypes;
+import book.data.service.dao.textblock.TextBlockDAO;
+import book.data.service.exception.BookAlreadyExistsException;
+import book.data.service.service.filter.BookFilterService;
+import book.data.service.service.id.IdService;
+import book.data.service.service.time.TimeService;
+import book.data.service.sqlmodel.tag.SearchTermFilterType;
+import book.data.service.sqlmodel.textblock.TextBlock;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
