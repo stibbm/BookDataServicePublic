@@ -11,6 +11,8 @@ import com.stripe.param.CustomerCreateParams;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import static book.data.service.constants.Environment.STRIPE_SECRET_API_KEY;
+
 @Slf4j
 @Service
 public class StripeClientWrapper {

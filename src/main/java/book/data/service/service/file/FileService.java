@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
+
+import book.data.service.model.CodeLanguage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.TrueFileFilter;
@@ -98,7 +100,7 @@ public class FileService {
                 return codeLanguage;
             }
         }
-        return NOTCODE;
+        return CodeLanguage.NOTCODE;
     }
 
 }

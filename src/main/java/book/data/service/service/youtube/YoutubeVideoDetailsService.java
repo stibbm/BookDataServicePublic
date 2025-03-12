@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.List;
 
+import static book.data.service.constants.Environment.YOUTUBE_GOOGLE_API_KEY;
+
 @Slf4j
 @Service
 public class YoutubeVideoDetailsService {

@@ -2,6 +2,13 @@ package book.data.service.service.stripe;
 
 
 import book.data.service.clientwrapper.StripeClientWrapper;
+import book.data.service.constants.Constants;
+import book.data.service.constants.Environment;
+import book.data.service.dao.account.AccountDAO;
+import book.data.service.dao.checkout.CheckoutSessionDAO;
+import book.data.service.model.StripeCheckoutSession;
+import book.data.service.service.time.TimeService;
+import book.data.service.sqlmodel.account.Account;
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
 import com.stripe.model.LineItem;
@@ -13,6 +20,8 @@ import com.stripe.model.checkout.Session;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import static book.data.service.constants.Stripe.*;
 
 @Slf4j
 @Service
@@ -41,7 +50,7 @@ public class StripeCheckoutService {
     }
 
     public String createSession(String itemName, String baseUrl, String createdBy) throws StripeException {
-        Stripe.apiKey = STRIPE_SECRET_API_KEY;
+        Stripe.apiKey = Environment.STRIPE_SECRET_API_KEY;
         String priceId = "";
         if (itemName.equalsIgnoreCase(ONE_K_TOKENS_ITEM_NAME)) {
             priceId = ONE_K_TOKENS_PRICE_ID;

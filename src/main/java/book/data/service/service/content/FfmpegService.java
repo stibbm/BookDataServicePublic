@@ -1,5 +1,7 @@
 package book.data.service.service.content;
 
+import book.data.service.model.ImageData;
+import book.data.service.model.VideoData;
 import book.data.service.service.file.FileService;
 import book.data.service.service.time.TimeService;
 import java.io.IOException;
@@ -7,6 +9,8 @@ import java.util.Arrays;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import static book.data.service.constants.Constants.ONE_THOUSAND;
 
 @Slf4j
 @Service

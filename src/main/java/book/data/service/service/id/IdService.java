@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.utils.URIBuilder;
 import org.springframework.stereotype.Component;
 
+import static book.data.service.constants.Constants.*;
+
 @Slf4j
 @Component
 public class IdService {

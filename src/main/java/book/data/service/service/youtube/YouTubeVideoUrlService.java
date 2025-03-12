@@ -3,6 +3,8 @@ package book.data.service.service.youtube;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import static book.data.service.constants.Constants.YOUTUBE_VIDEO_URL_TEMPLATE;
+
 @Slf4j
 @Service
 public class YouTubeVideoUrlService {

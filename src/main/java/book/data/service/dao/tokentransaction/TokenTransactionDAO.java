@@ -1,7 +1,6 @@
 package book.data.service.dao.tokentransaction;
 
 import static book.data.service.constants.Constants.TOKEN_TRANSACTION_LOCK;
-import static matt.book.data.service.constants.Constants.TOKEN_TRANSACTION_LOCK;
 
 import book.data.service.exception.checkoutsession.CheckoutSessionDoesNotExistException;
 import book.data.service.repository.CheckoutSessionRepository;

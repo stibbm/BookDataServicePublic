@@ -4,7 +4,7 @@ public class Stripe {
     public static final String ONE_K_TOKENS_PRICE_ID = "<priceId1>";
     public static final String FIVE_K_TOKENS_PRICE_ID = "<priceId2";
     public static final String TEN_K_TOKENS_PRICE_ID = "<priceId3>";
-    public static final String TWENTY_K_TOKENS_PRICE_ID = "<priceId4>";
+    public static final String TWENTY_FIVE_K_TOKENS_PRICE_ID = "<priceId4>";
 
     public static final String ONE_K_TOKENS_ITEM_NAME = "1k tokens";
     public static final String FIVE_K_TOKENS_ITEM_NAME = "5k tokens";

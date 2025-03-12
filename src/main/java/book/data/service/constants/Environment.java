@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 public class Environment {
-    public static final String STRIPE_OPEN_API_KEY = "<key>";
+    public static final String STRIPE_SECRET_API_KEY = "<key>";
     // secret for google cloud desktop app
     public static final String CLIENT_SECRETS = "<desktopappsecretpath>.json";
     public static final Collection<String> SCOPES =

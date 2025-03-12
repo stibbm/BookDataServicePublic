@@ -3,6 +3,8 @@ package book.data.service.service.costandprice;;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import static book.data.service.constants.Constants.*;
+
 @Slf4j
 @Service
 public class CostAndPriceService {
