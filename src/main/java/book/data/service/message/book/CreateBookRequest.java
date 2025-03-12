@@ -16,6 +16,7 @@ public class CreateBookRequest implements Serializable {
     private String bookDescription;
     private String bookLanguage;
     private String bookViews;
-    private String bookThumbnail;
     private Set<String> bookTags;
+    private byte[] bookThumbnailImageBytes;
+    private String fileType;
 }
