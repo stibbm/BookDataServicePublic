@@ -30,7 +30,7 @@ public class CreateYouTubeVideoActivity {
 
     @PostMapping(CREATE_YOUTUBE_VIDEO)
     @CrossOrigin(ALL_ORIGINS)
-    public @ResponseBody book.data.service.youtube.CreateYouTubeVideoResponse createYouTubeVideo(
+    public @ResponseBody book.data.service.message.youtube.CreateYouTubeVideoResponse createYouTubeVideo(
         @RequestBody book.data.service.youtube.CreateYouTubeVideoRequest createYouTubeVideoRequest,
         @RequestHeader("Authorization") String authToken
     ) {
@@ -45,6 +45,6 @@ public class CreateYouTubeVideoActivity {
         if (youTubeVideo==null) {
             throw new RuntimeException("Failed to successfully create youtube video");
         }
-        return book.data.service.youtube.CreateYouTubeVideoResponse.builder().youTubeVideo(youTubeVideo).build();
+        return book.data.service.message.youtube.CreateYouTubeVideoResponse.builder().youTubeVideo(youTubeVideo).build();
     }
 }
