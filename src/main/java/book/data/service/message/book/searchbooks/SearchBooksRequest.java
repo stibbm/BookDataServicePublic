@@ -1,5 +1,6 @@
 package book.data.service.message.book.searchbooks;
 
+import book.data.service.sqlmodel.tag.SearchTermFilterType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
