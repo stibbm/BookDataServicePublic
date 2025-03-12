@@ -4,4 +4,6 @@ public class AudioDoesNotExistException extends RuntimeException {
     public AudioDoesNotExistException(String message) {
         super(message);
     }
+
+    public AudioDoesNotExistException() {}
 }

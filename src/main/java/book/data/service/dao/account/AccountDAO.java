@@ -1,4 +1,4 @@
-package book.data.service.repository;
+package book.data.service.dao.account;
 
 
 import lombok.extern.slf4j.Slf4j;

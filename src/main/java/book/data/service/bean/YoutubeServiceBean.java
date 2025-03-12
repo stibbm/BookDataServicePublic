@@ -2,6 +2,7 @@ package book.data.service.bean;
 
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
+import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
 import com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets;
 import com.google.api.client.http.javanet.NetHttpTransport;
@@ -14,6 +15,12 @@ import org.springframework.context.annotation.Configuration;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
+import static book.data.service.constants.Environment.APPLICATION_NAME;
+import static book.data.service.constants.Environment.CLIENT_SECRETS;
+import static book.data.service.constants.Environment.DATA_STORE_DIR;
+import static book.data.service.constants.Environment.JSON_FACTORY;
+import static book.data.service.constants.Environment.SCOPES;
 
 @Configuration
 @Slf4j

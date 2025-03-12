@@ -4,4 +4,6 @@ public class AudioAlreadyExistsException extends RuntimeException {
     public AudioAlreadyExistsException(String message) {
         super(message);
     }
+
+    public AudioAlreadyExistsException() {}
 }
