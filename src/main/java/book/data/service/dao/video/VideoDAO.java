@@ -2,6 +2,8 @@ package book.data.service.dao.video;
 
 import book.data.service.exception.book.BookDoesNotExistException;
 import book.data.service.exception.chapter.ChapterDoesNotExistException;
+import book.data.service.exception.video.VideoAlreadyExistsException;
+import book.data.service.exception.video.VideoDoesNotExistException;
 import book.data.service.repository.BookRepository;
 import book.data.service.repository.ChapterRepository;
 import book.data.service.repository.VideoRepository;

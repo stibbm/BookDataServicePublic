@@ -4,4 +4,8 @@ public class VideoDoesNotExistException extends RuntimeException {
     public VideoDoesNotExistException(String message) {
         super(message);
     }
+
+    public VideoDoesNotExistException() {
+
+    }
 }

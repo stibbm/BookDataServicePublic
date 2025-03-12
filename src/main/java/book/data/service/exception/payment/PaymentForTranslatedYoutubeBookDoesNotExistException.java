@@ -4,4 +4,6 @@ public class PaymentForTranslatedYoutubeBookDoesNotExistException extends Runtim
   public PaymentForTranslatedYoutubeBookDoesNotExistException(String message) {
     super(message);
   }
+
+  public PaymentForTranslatedYoutubeBookDoesNotExistException() {}
 }

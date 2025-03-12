@@ -2,6 +2,7 @@ package book.data.service.dao.textblock;
 
 import book.data.service.exception.book.BookDoesNotExistException;
 import book.data.service.exception.chapter.ChapterDoesNotExistException;
+import book.data.service.exception.textblock.TextBlockAlreadyExistsException;
 import book.data.service.factory.TextBlockFactory;
 import book.data.service.repository.BookRepository;
 import book.data.service.repository.ChapterRepository;
@@ -20,6 +21,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+
+import static book.data.service.constants.Constants.MAX_PAGE_SIZE;
+import static book.data.service.constants.Constants.PAGE_ZERO;
 
 @Slf4j
 @Service

@@ -4,4 +4,8 @@ public class PaymentForTranslatedYoutubeBookAlreadyExistsException extends Runti
     public PaymentForTranslatedYoutubeBookAlreadyExistsException(String message) {
         super(message);
     }
+
+    public PaymentForTranslatedYoutubeBookAlreadyExistsException() {
+
+    }
 }

@@ -2,6 +2,9 @@ package book.data.service.dao.tokentransaction;
 
 import book.data.service.exception.book.BookDoesNotExistException;
 import book.data.service.exception.chapter.ChapterDoesNotExistException;
+import book.data.service.exception.payment.PaymentForTranslatedYoutubeBookAlreadyExistsException;
+import book.data.service.exception.payment.PaymentForTranslatedYoutubeBookDoesNotExistException;
+import book.data.service.exception.tokentransaction.TokentTransactionDoesNotExistException;
 import book.data.service.model.VideoCreationMilestone;
 import book.data.service.repository.BookRepository;
 import book.data.service.repository.ChapterRepository;
@@ -142,7 +145,7 @@ public class PaymentForTranslatedYoutubeBookDAO {
             throw new PaymentForTranslatedYoutubeBookAlreadyExistsException();
         }
         if (!tokenTransactionRepository.doesTokenTransactionExist(tokenTransactionNumber, createdBy)) {
-            throw new TokenTransactionDoesNotExistException();
+            throw new TokentTransactionDoesNotExistException();
         }
         if (!bookRepository.doesBookExistWithOnlyBookNumber(bookNumber)) {
             throw new BookDoesNotExistException();
