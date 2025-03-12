@@ -1,14 +1,17 @@
 package book.data.service.manager.account;
 
 import book.data.service.clientwrapper.StripeClientWrapper;
-import book.data.service.repository.AccountDAO;
+import book.data.service.dao.account.AccountDAO;
+import book.data.service.exception.account.AccountAlreadyExistsException;
 import book.data.service.service.time.TimeService;
+import book.data.service.sqlmodel.account.Account;
 import com.stripe.exception.StripeException;
-import com.stripe.model.Account;
 import com.stripe.model.Customer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import static book.data.service.constants.Constants.ACCOUNT_UNVERIFIED;
 
 @Slf4j
 @Service
