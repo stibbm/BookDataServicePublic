@@ -1,5 +1,7 @@
 package book.data.service.message.image;
 
+import static org.apache.commons.lang3.Validate.notNull;
+
 import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,7 +16,14 @@ public class CreateImageRequest implements Serializable {
     private String bookName;
     private String chapterNumber;
     private String imageNumber;
-    private String s3Key;
-    private String s3Bucket;
-    private String relativeImageUrl;
+    private byte[] fileBytes;
+    private String fileType;
+
+    public void validate() {
+        notNull(bookName, "bookName is required");
+        notNull(chapterNumber, "chapterNumber is required");
+        notNull(imageNumber, "imageNumber is required");
+        notNull(fileBytes, "fileBytes is null");
+        notNull(fileType, "fileType is null");
+    }
 }
