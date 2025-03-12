@@ -17,6 +17,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.IntStream;
 
+import static book.data.service.constants.Constants.MAX_PAGE_SIZE;
+import static book.data.service.constants.Constants.PAGE_ZERO;
+import static book.data.service.constants.Constants.TEXT_BLOCK_CHUNK_SIZE;
+
 @Slf4j
 @Service
 public class TextBlockManager {

@@ -1,7 +1,7 @@
 package book.data.service.activity.account;
 
 import book.data.service.firebase.FirebaseService;
-import book.data.service.manager.AccountManager;
+import book.data.service.manager.account.AccountManager;
 import book.data.service.message.account.CreateAccountRequest;
 import book.data.service.message.account.CreateAccountResponse;
 import book.data.service.sqlmodel.account.Account;
@@ -21,7 +21,7 @@ public class CreateAccountActivity {
 
     @Autowired
     public CreateAccountActivity(
-            AccountManager accountManager,
+            book.data.service.manager.account.AccountManager accountManager,
             FirebaseService firebaseService
     ) {
         this.accountManager = accountManager;

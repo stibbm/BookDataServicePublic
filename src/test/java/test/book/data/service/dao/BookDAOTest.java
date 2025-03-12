@@ -1,16 +1,12 @@
 package test.book.data.service.dao;
 
-
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.when;
-
+import book.data.service.dao.book.BookDAO;
+import book.data.service.exception.book.BookAlreadyExistsException;
+import book.data.service.exception.book.BookDoesNotExistException;
+import book.data.service.repository.BookRepository;
 import book.data.service.sqlmodel.book.Book;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import java.util.List;
-import java.util.Set;
-
 import org.assertj.core.api.Assertions;
 import org.junit.Assert;
 import org.junit.Before;
@@ -18,6 +14,17 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.data.domain.PageRequest;
+
+import java.util.List;
+import java.util.Set;
+
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.when;
+import static test.book.data.service.manager.BookManagerTest.CREATED_AT_EPOCH_MILLI_TIME_ONE;
+import static test.book.data.service.manager.BookManagerTest.CREATED_AT_EPOCH_MILLI_TIME_TWO;
+import static test.book.data.service.manager.BookManagerTest.CREATED_BY_ONE;
+import static test.book.data.service.manager.BookManagerTest.CREATED_BY_TWO;
 
 public class BookDAOTest {
     public static final Long BOOK_NUMBER_ONE = 1L;

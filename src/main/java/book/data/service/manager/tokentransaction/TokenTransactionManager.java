@@ -2,6 +2,8 @@ package book.data.service.manager.tokentransaction;
 
 import book.data.service.dao.tokentransaction.PaymentForTranslatedYoutubeBookDAO;
 import book.data.service.dao.tokentransaction.TokenTransactionDAO;
+import book.data.service.exception.payment.PaymentForTranslatedYoutubeBookAlreadyExistsException;
+import book.data.service.exception.tokentransaction.InsufficientTokenFundsException;
 import book.data.service.model.TranslatedYoutubeBookStatus;
 import book.data.service.model.VideoCreationMilestone;
 import book.data.service.service.time.TimeService;
@@ -13,6 +15,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.AbstractMap;
 import java.util.List;
+
+import static book.data.service.constants.Constants.TOKEN_TRANSACTION_LOCK;
 
 @Slf4j
 @Service

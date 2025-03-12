@@ -4,4 +4,6 @@ public class InvalidBookSortTypeException extends RuntimeException {
     public InvalidBookSortTypeException(String message) {
         super(message);
     }
+
+    public InvalidBookSortTypeException() {}
 }

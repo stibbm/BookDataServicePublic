@@ -3,10 +3,13 @@ package book.data.service.activity.book;
 import static book.data.service.constants.Routes.ALL_ORIGINS;
 import static book.data.service.constants.Routes.GET_ALL_BOOKS_PAGED;
 
+import book.data.service.manager.book.BookManager;
 import book.data.service.message.book.GetAllBooksPagedRequest;
 import book.data.service.message.book.GetAllBooksPagedResponse;
 
 import java.util.List;
+
+import book.data.service.sqlmodel.book.Book;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

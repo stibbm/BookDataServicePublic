@@ -6,6 +6,7 @@ import book.data.service.manager.book.BookManager;
 import book.data.service.manager.book.PopulateBooksManager;
 import book.data.service.manager.chapter.ChapterManager;
 import book.data.service.manager.textblock.TextBlockManager;
+import book.data.service.model.PlayListData;
 import book.data.service.model.YoutubeVideoInfo;
 import book.data.service.service.file.FileService;
 import book.data.service.service.youtube.YouTubePlayListService;
@@ -26,6 +27,9 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import static book.data.service.constants.videodetailstemplates.VideoDetailsTemplates.getPlaylistIdBySeriesString;
+import static book.data.service.constants.videodetailstemplates.YoutubePlayLists.getPlayListMapBySeriesString;
 
 @Slf4j
 @Service

@@ -4,4 +4,6 @@ public class InsufficientTokenFundsException extends RuntimeException {
   public InsufficientTokenFundsException(String message) {
     super(message);
   }
+
+  public InsufficientTokenFundsException() {}
 }

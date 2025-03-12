@@ -8,12 +8,15 @@ import book.data.service.dao.chapter.ChapterDAO;
 import book.data.service.exception.book.BookDoesNotExistException;
 import book.data.service.exception.chapter.ChapterAlreadyExistsException;
 import book.data.service.exception.chapter.ChapterDoesNotExistException;
+import book.data.service.service.time.TimeService;
 import book.data.service.sqlmodel.book.Book;
 import book.data.service.sqlmodel.chapter.Chapter;
 import book.data.service.sqlmodel.chapter.LockStatus;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import static book.data.service.constants.Constants.NO_VIEWS;
 
 @Slf4j
 @Component

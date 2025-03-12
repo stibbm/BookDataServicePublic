@@ -19,6 +19,10 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import static book.data.service.constants.Constants.MAX_PAGE_SIZE;
+import static book.data.service.constants.Constants.PAGE_ZERO;
+import static book.data.service.constants.Constants.YOUTUBE_VIDEO_CHAPTER_COUNT;
+
 @Slf4j
 @Service
 public class PublicBookDetailsCardManager {

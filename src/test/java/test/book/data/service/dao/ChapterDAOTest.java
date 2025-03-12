@@ -1,13 +1,22 @@
 package test.book.data.service.dao;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
-import static test.book.data.service.dao.BookDAOTest.CREATED_BY_ONE;
-import static test.book.data.service.dao.BookDAOTest.CREATED_BY_TWO;
+import static test.book.data.service.manager.BookManagerTest.CREATED_AT_EPOCH_MILLI_TIME_ONE;
+import static test.book.data.service.manager.BookManagerTest.CREATED_AT_EPOCH_MILLI_TIME_TWO;
+import static test.book.data.service.manager.BookManagerTest.CREATED_BY_ONE;
 
+import book.data.service.dao.chapter.ChapterDAO;
+import book.data.service.exception.book.BookDoesNotExistException;
+import book.data.service.exception.chapter.ChapterDoesNotExistException;
+import book.data.service.firebase.FirebaseService;
+import book.data.service.repository.BookRepository;
+import book.data.service.repository.ChapterRepository;
 import book.data.service.sqlmodel.chapter.Chapter;
 import book.data.service.sqlmodel.chapter.ChapterId;
+import book.data.service.sqlmodel.chapter.LockStatus;
 import com.google.common.collect.ImmutableList;
 import com.google.firebase.auth.FirebaseToken;
 import java.util.List;
@@ -19,9 +28,12 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.data.domain.PageRequest;
+import test.book.data.service.manager.BookManagerTest;
 
 public class ChapterDAOTest {
 
+    public static final LockStatus LOCK_STATUS_ONE_EDITABLE = LockStatus.EDITABLE;
+    public static final LockStatus LOCK_STATUS_TWO_LOCKED = LockStatus.LOCKED;
     public static final String CHAPTER_NAME_ONE = "chapterNameOne";
     public static final Long CHAPTER_VIEWS_ONE = 100L;
     public static final Long CHAPTER_NUMBER_ONE = 1L;
@@ -47,7 +59,7 @@ public class ChapterDAOTest {
                     CHAPTER_ID_TWO,
                     CHAPTER_NAME_TWO,
                     CHAPTER_VIEWS_TWO,
-                    CREATED_BY_TWO,
+                    BookManagerTest.CREATED_BY_TWO,
                     CREATED_AT_EPOCH_MILLI_TIME_TWO,
                     LOCK_STATUS_ONE_EDITABLE
             );

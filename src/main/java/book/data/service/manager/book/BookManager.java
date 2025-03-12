@@ -7,6 +7,7 @@ import book.data.service.dao.book.BookDAO;
 import book.data.service.dao.textblock.TextBlockDAO;
 import book.data.service.exception.book.BookAlreadyExistsException;
 import book.data.service.exception.book.BookDoesNotExistException;
+import book.data.service.exception.book.InvalidBookSortTypeException;
 import book.data.service.service.filter.BookFilterService;
 import book.data.service.service.id.IdService;
 import book.data.service.service.time.TimeService;
@@ -25,6 +26,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import static book.data.service.constants.Constants.MAX_PAGE_SIZE;
+import static book.data.service.constants.Constants.NO_VIEWS;
+import static book.data.service.constants.Constants.PAGE_ZERO;
+import static book.data.service.constants.Constants.S3_IMAGE_BUCKET;
 
 @Slf4j
 @Component
