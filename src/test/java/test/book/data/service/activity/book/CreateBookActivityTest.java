@@ -15,6 +15,9 @@ import java.util.List;
 
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
+import static test.book.data.service.dao.BookDAOTest.*;
+import static test.book.data.service.manager.BookManagerTest.BYTES_ONE;
+import static test.book.data.service.manager.BookManagerTest.FILE_TYPE_ONE;
 
 public class CreateBookActivityTest {
 
