@@ -1,6 +1,12 @@
 package test.book.data.service.activity.book;
 
+import book.data.service.activity.book.CreateBookActivity;
+import book.data.service.exception.book.BookAlreadyExistsException;
+import book.data.service.firebase.FirebaseService;
+import book.data.service.manager.book.BookManager;
 import book.data.service.message.book.CreateBookRequest;
+import book.data.service.message.book.CreateBookResponse;
+import book.data.service.sqlmodel.request.GetBookRequestLog;
 import com.google.common.collect.ImmutableList;
 import org.assertj.core.api.Assertions;
 import org.junit.Assert;
@@ -15,9 +21,9 @@ import java.util.List;
 
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
+import static test.book.data.service.activity.book.GetAllBooksPagedActivityTest.AUTH_TOKEN;
 import static test.book.data.service.dao.BookDAOTest.*;
-import static test.book.data.service.manager.BookManagerTest.BYTES_ONE;
-import static test.book.data.service.manager.BookManagerTest.FILE_TYPE_ONE;
+import static test.book.data.service.manager.BookManagerTest.*;
 
 public class CreateBookActivityTest {
 
