@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.commons.lang3.Validate;
 
 @Data
 @Builder
@@ -14,4 +15,10 @@ public class GetImageByBookNameAndChapterNumberAndImageNumberRequest implements 
     private String bookName;
     private String chapterNumber;
     private String imageNumber;
+
+    public void validate() {
+        Validate.notNull(bookName, "bookName is required");
+        Validate.notNull(chapterNumber, "chapterNumber is required");
+        Validate.notNull(imageNumber, "imageNumber is required");
+    }
 }
