@@ -56,6 +56,8 @@ stripe listen --forward-to localhost:9190/stripeWebhooks
 
 **How to setup database first time**
 
+```
+
 1. Run "docker-compose up"
 2. Set spring.jpa.hibernate.ddl-auto=create in application.properties
 3. Run "gradle bootRun" (Error messages will appear but it will run)
@@ -64,6 +66,7 @@ stripe listen --forward-to localhost:9190/stripeWebhooks
 6. Run "gradle bootRun"
 7. DB is now setup correctly
 
+```
 
 ***Terminal 1***
 ```
