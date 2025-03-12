@@ -5,6 +5,7 @@ import book.data.service.activity.book.GetBookByBookNameActivity;
 import book.data.service.exception.book.BookDoesNotExistException;
 import book.data.service.firebase.FirebaseService;
 import book.data.service.manager.book.BookManager;
+import book.data.service.manager.book.GetBookRequestLogManager;
 import book.data.service.message.book.GetBookByBookNameRequest;
 import book.data.service.message.book.GetBookByBookNameResponse;
 import org.assertj.core.api.Assertions;

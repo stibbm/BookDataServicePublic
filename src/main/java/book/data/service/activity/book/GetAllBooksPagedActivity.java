@@ -23,32 +23,35 @@ import book.data.service.firebase.FirebaseService;
 @Slf4j
 @RestController
 public class GetAllBooksPagedActivity {
-  private BookManager bookManager;
-  private FirebaseService firebaseService;
+    private BookManager bookManager;
+    private FirebaseService firebaseService;
 
-  @Autowired
-  public GetAllBooksPagedActivity(
-      BookManager bookManager,
-      FirebaseService firebaseService) {
-    this.bookManager = bookManager;
-    this.firebaseService = firebaseService;
-  }
+    @Autowired
+    public GetAllBooksPagedActivity(
+        BookManager bookManager,
+        FirebaseService firebaseService
+    ) {
+        this.bookManager = bookManager;
+        this.firebaseService = firebaseService;
+    }
 
-  @PostMapping(GET_ALL_BOOKS_PAGED)
-  @CrossOrigin(ALL_ORIGINS)
-  public @ResponseBody GetAllBooksPagedResponse getAllBooksPaged(
-      @RequestBody GetAllBooksPagedRequest getAllBooksPagedRequest,
-      @RequestHeader("Authorization") String authToken) {
-    String createdBy = firebaseService.getEmail(authToken);
-    List<Book> bookList = bookManager.getAllBooksPaged(
-        Integer.parseInt(getAllBooksPagedRequest.getPageNumber()),
-        Integer.parseInt(getAllBooksPagedRequest.getPageSize()),
-        createdBy);
-    GetAllBooksPagedResponse getAllBooksPagedResponse = GetAllBooksPagedResponse.builder()
-        .bookList(bookList)
-        .pageNumber(Integer.parseInt(getAllBooksPagedRequest.getPageNumber()))
-        .pageSize(Integer.parseInt(getAllBooksPagedRequest.getPageSize()))
-        .build();
-    return getAllBooksPagedResponse;
-  }
+    @PostMapping(GET_ALL_BOOKS_PAGED)
+    @CrossOrigin(ALL_ORIGINS)
+    public @ResponseBody GetAllBooksPagedResponse getAllBooksPaged(
+        @RequestBody GetAllBooksPagedRequest getAllBooksPagedRequest,
+        @RequestHeader("Authorization") String authToken
+    ) {
+        String createdBy = firebaseService.getEmail(authToken);
+        List<Book> bookList = bookManager.getAllBooksPaged(
+            Integer.parseInt(getAllBooksPagedRequest.getPageNumber()),
+            Integer.parseInt(getAllBooksPagedRequest.getPageSize()),
+            createdBy
+        );
+        GetAllBooksPagedResponse getAllBooksPagedResponse = GetAllBooksPagedResponse.builder()
+            .bookList(bookList)
+            .pageNumber(Integer.parseInt(getAllBooksPagedRequest.getPageNumber()))
+            .pageSize(Integer.parseInt(getAllBooksPagedRequest.getPageSize()))
+            .build();
+        return getAllBooksPagedResponse;
+    }
 }
