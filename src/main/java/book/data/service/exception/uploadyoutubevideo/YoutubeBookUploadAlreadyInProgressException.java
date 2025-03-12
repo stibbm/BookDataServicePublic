@@ -4,4 +4,6 @@ public class YoutubeBookUploadAlreadyInProgressException extends RuntimeExceptio
     public YoutubeBookUploadAlreadyInProgressException(String message) {
         super(message);
     }
+
+    public YoutubeBookUploadAlreadyInProgressException() {}
 }

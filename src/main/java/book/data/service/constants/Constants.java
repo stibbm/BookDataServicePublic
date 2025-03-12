@@ -7,6 +7,7 @@ public class Constants {
     public static final String S3_IMAGE_BUCKET = "<s3 image bucket>";
     public static final String S3_AUDIO_BUCKET = "<s3 audio bucket>";
     public static final String S3_VIDEO_BUCKET = "<s3 video bucket>";
+    public static final String S3_YOUTUBE_VIDEO_BUCKET = "<s3 youtube video bucket>";
     public static final String S3_PREFIX = "<s3 prefix>";
     public static final String S3_PREFIX_TWO = "<s3 prefix two>";
     public static final String S3_AUDIO_PREFIX = "<s3 audio prefix>";

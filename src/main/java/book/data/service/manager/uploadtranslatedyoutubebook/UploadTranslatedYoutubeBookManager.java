@@ -1,21 +1,36 @@
 package book.data.service.manager.uploadtranslatedyoutubebook;
 
+import book.data.service.constants.videodetailstemplates.VideoDetailsTemplates;
 import book.data.service.dao.book.BookDAO;
 import book.data.service.dao.tokentransaction.PaymentForTranslatedYoutubeBookDAO;
 import book.data.service.dao.youtubevideo.YoutubeVideoDetailsTemplateDAO;
+import book.data.service.exception.uploadyoutubevideo.YoutubeBookUploadAlreadyInProgressException;
+import book.data.service.exception.uploadyoutubevideo.YoutubeBookUploadPaymentNotFoundException;
+import book.data.service.factory.YoutubeVideoDetailsFactory;
+import book.data.service.manager.youtubevideo.YouTubeVideoManager;
 import book.data.service.model.TranslatedYoutubeBookStatus;
+import book.data.service.model.VideoCreationMilestone;
 import book.data.service.model.VideoData;
+import book.data.service.model.YouTubeVideo;
 import book.data.service.service.s3video.S3YoutubeVideoService;
+import book.data.service.service.youtube.YouTubePlayListService;
+import book.data.service.service.youtube.YoutubeUploadService;
+import book.data.service.service.youtube.YoutubeVideoDetailsService;
 import book.data.service.sqlmodel.book.Book;
 import book.data.service.sqlmodel.payment.PaymentForTranslatedYoutubeBook;
 import book.data.service.sqlmodel.youtubevideo.YoutubeVideoDetailsTemplate;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Set;
+import book.data.service.constants.videodetailstemplates.Series;
+
+import static book.data.service.constants.Constants.UPLOAD_TRANSLATED_YOUTUBE_BOOK_LOCK;
+import static book.data.service.constants.videodetailstemplates.VideoDetailsTemplates.GET_NAME_TO_SERIES_MAP;
 
 @Slf4j
 @Service
@@ -103,7 +118,7 @@ public class UploadTranslatedYoutubeBookManager {
                         videoData
                 );
                 log.info("youtube upload completed");
-                matt.book.data.service.sqlmodel.youtubevideo.YouTubeVideo dbYoutubeVideo =
+                book.data.service.sqlmodel.youtubevideo.YouTubeVideo dbYoutubeVideo =
                         youTubeVideoManager.createYouTubeVideo(
                                 youtubeVideo.getVideoId(),
                                 bookNumber,

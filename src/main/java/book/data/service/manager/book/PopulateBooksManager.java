@@ -1,11 +1,17 @@
 package book.data.service.manager.book;
 
+import book.data.service.constants.videodetailstemplates.SeriesHelper;
+import book.data.service.constants.videodetailstemplates.VideoDetailsTemplate;
+import book.data.service.constants.videodetailstemplates.VideoDetailsTemplates;
+import book.data.service.constants.videodetailstemplates.YoutubePlayLists;
+import book.data.service.model.PlayListData;
 import book.data.service.sqlmodel.book.Book;
 import book.data.service.sqlmodel.youtubevideo.YoutubeVideoDetailsTemplate;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import book.data.service.constants.videodetailstemplates.Series;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;

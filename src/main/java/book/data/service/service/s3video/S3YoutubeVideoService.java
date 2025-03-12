@@ -1,9 +1,13 @@
 package book.data.service.service.s3video;
 
+import book.data.service.clientwrapper.S3ClientWrapper;
+import book.data.service.model.VideoData;
 import book.data.service.service.id.IdService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import static book.data.service.constants.Constants.S3_YOUTUBE_VIDEO_PREFIX;
+import static book.data.service.constants.Constants.S3_YOUTUBE_VIDEO_BUCKET;
 
 @Slf4j
 @Service
