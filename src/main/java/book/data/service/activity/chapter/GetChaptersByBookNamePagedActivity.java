@@ -8,9 +8,9 @@ import book.data.service.firebase.FirebaseService;
 import book.data.service.manager.RequestLogManager;
 import book.data.service.manager.ResponseLogManager;
 import book.data.service.manager.chapter.ChapterManager;
-import book.data.service.manager.chapter.GetChapterRequestLogManager;
 import book.data.service.message.chapter.GetChaptersByBookNamePagedRequest;
 import book.data.service.message.chapter.GetChaptersByBookNamePagedResponse;
+import book.data.service.sqlmodel.chapter.Chapter;
 import java.time.Instant;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GetChaptersByBookNamePagedActivity {
     private ChapterManager chapterManager;
-    private GetChapterRequestLogManager requestLogManager;
+    private RequestLogManager requestLogManager;
     private ResponseLogManager responseLogManager;
     private FirebaseService firebaseService;
 

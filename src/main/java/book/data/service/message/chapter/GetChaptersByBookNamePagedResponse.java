@@ -1,6 +1,6 @@
 package book.data.service.message.chapter;
 
-import book.data.service.model.chapter.Chapter;
+import book.data.service.sqlmodel.chapter.Chapter;
 import java.io.Serializable;
 import java.util.List;
 import lombok.AllArgsConstructor;
