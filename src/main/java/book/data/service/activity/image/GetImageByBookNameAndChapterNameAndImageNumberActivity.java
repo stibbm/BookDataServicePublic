@@ -21,13 +21,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-public class GetImagesByBookNameAndChapterNameAndImageNumberActivity {
+public class GetImageByBookNameAndChapterNameAndImageNumberActivity {
     private ImageManager imageManager;
     private RequestLogManager requestLogManager;
     private FirebaseService firebaseService;
 
     @Autowired
-    public GetImagesByBookNameAndChapterNameAndImageNumberActivity(
+    public GetImageByBookNameAndChapterNameAndImageNumberActivity(
         ImageManager imageManager,
         RequestLogManager requestLogManager,
         FirebaseService firebaseService
