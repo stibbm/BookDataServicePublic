@@ -18,6 +18,9 @@
 
 * Price to translate chapter = (cost) * (price multiplier)
 
+### Sufficient Coins (Count is green colored)
+
+<img width="1792" alt="Screenshot 2025-03-14 at 11 24 50 AM" src="https://github.com/user-attachments/assets/c23accd6-1bda-496e-b794-a1fa61c6f5b0" />
 
 ### Not Enough Coins (Count is red colored)
 
