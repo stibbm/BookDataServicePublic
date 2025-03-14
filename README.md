@@ -1,5 +1,19 @@
 # Book Data Service
 
+## Cost Per Token = $0.01
+
+* OpenAPI gpt-4 cost per million tokens = $30
+
+* OpenAPI cost to translate a million chars estimate = $60.22
+(based on tokens used to translate different inputs and amount of tokens used)
+
+* Polly cost to translate a million chars = $16
+
+* Net cost to translate and narrate a million chars = $76.22
+
+* Price to translate chapter = (cost) * (price multiplier)
+
+
 ## Buy Translation Coins Stripe Integration
 
 https://github.com/user-attachments/assets/5971f74d-8876-4625-930a-c14f2a773cf1
