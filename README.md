@@ -1,5 +1,11 @@
 # Book Data Service
 
+## Buy Translation Coins Stripe Integration
+
+https://github.com/user-attachments/assets/5971f74d-8876-4625-930a-c14f2a773cf1
+
+
+
 ## Activity Endpoints
 
 ### Account
