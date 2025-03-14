@@ -19,11 +19,13 @@
 * Price to translate chapter = (cost) * (price multiplier)
 
 
+### Not Enough Coins (Count is red colored)
+
+<img width="1792" alt="notenoughcoinsred" src="https://github.com/user-attachments/assets/8d0418e5-1ff3-4921-b4d2-7bfda339f6bb" />
+
 ## Buy Translation Coins Stripe Integration
 
 https://github.com/user-attachments/assets/5971f74d-8876-4625-930a-c14f2a773cf1
-
-
 
 ## Activity Endpoints
 
