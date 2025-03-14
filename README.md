@@ -1,5 +1,10 @@
 # Book Data Service
 
+## Service Diagram
+
+![abc](https://github.com/user-attachments/assets/23cba135-eb9d-4edb-b7c8-c35dcf5a98a5)
+
+
 ## Cost Per Token = $0.01
 
 * OpenAPI gpt-4 cost per million tokens = $30
