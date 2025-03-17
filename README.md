@@ -30,46 +30,10 @@
 
 https://github.com/user-attachments/assets/5971f74d-8876-4625-930a-c14f2a773cf1
 
-## Activity Endpoints
+## Generate Narration Demo
 
-### Account
-- CreateAccount
-- GetAccount
+https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44f0-b024-ffecb6f30323
 
-### Audio
-- CreateAudio
-- GetAudiosByBookNameAndChapterNumber
-
-### Book
-- CreateBook
-- DeleteBook
-- GetAllBooksPaged
-- GetAllBooksSortedPaged
-- GetBookByBookName
-- GetBookByBookNumber
-- GetBooksByBookTagPaged
-- SearchBooksByBookTags
-- SearchBooksByContent
-
-### BookView
-- CreateBookView
-- GetBookViewsByBookNumber
-
-### Chapter
-- CreateChapter
-- GetChapterByBookNameAndChapterNumber
-- GetChapterHeadersByBookNumber
-- GetChaptersByBookName
-- GetChaptersByBookNamePaged
-
-### Image
-- CreateImage
-- GetImagesByBookNameAndChapterNameAndImageNumber
-- GetImagesByBookNameAndChapterNumberPaged
-
-### Populate
-- PopulateGitBooks
-- PopulateVideoData
 
 --------------------------
 
@@ -131,6 +95,46 @@ npm run start
 ```
 
 
+## Activity Endpoints
+
+### Account
+- CreateAccount
+- GetAccount
+
+### Audio
+- CreateAudio
+- GetAudiosByBookNameAndChapterNumber
+
+### Book
+- CreateBook
+- DeleteBook
+- GetAllBooksPaged
+- GetAllBooksSortedPaged
+- GetBookByBookName
+- GetBookByBookNumber
+- GetBooksByBookTagPaged
+- SearchBooksByBookTags
+- SearchBooksByContent
+
+### BookView
+- CreateBookView
+- GetBookViewsByBookNumber
+
+### Chapter
+- CreateChapter
+- GetChapterByBookNameAndChapterNumber
+- GetChapterHeadersByBookNumber
+- GetChaptersByBookName
+- GetChaptersByBookNamePaged
+
+### Image
+- CreateImage
+- GetImagesByBookNameAndChapterNameAndImageNumber
+- GetImagesByBookNameAndChapterNumberPaged
+
+### Populate
+- PopulateGitBooks
+- PopulateVideoData
 
 
 
