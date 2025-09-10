@@ -1,34 +1,22 @@
+
+
+
+ 
+
 # Book Data Service
 
-## Service Diagram
+| Quick Navigation                                    |                                     |
+| --------------------------------------------------- | ----------------------------------- |
+| [Demo](#generate-narration-demo)                    | Demo with YouTube integration       |
+| [Install](#how-to-run-full-service-and-site)        | Pre-requisites and run instructions |
+| [Version 2](#version-2)                             | Updated user interaction model      |
+| [Stripe](#buy-translation-coins-stripe-integration) | Stripe integration and coins        |
+| [Pricing](#pricing)								  | Translation token pricing breakdown	|
 
-![abc](https://github.com/user-attachments/assets/23cba135-eb9d-4edb-b7c8-c35dcf5a98a5)
+<br/>
 
 
-## Cost Per Token = $0.01
 
-* OpenAPI gpt-4 cost per million tokens = $30
-
-* OpenAPI cost to translate a million chars estimate = $60.22
-(based on tokens used to translate different inputs and amount of tokens used)
-
-* Polly cost to translate a million chars = $16
-
-* Net cost to translate and narrate a million chars = $76.22
-
-* Price to translate chapter = (cost) * (price multiplier)
-
-### Sufficient Coins (Count is green colored)
-
-<img width="1792" alt="Screenshot 2025-03-14 at 11 24 50 AM" src="https://github.com/user-attachments/assets/c23accd6-1bda-496e-b794-a1fa61c6f5b0" />
-
-### Not Enough Coins (Count is red colored)
-
-<img width="1792" alt="notenoughcoinsred" src="https://github.com/user-attachments/assets/8d0418e5-1ff3-4921-b4d2-7bfda339f6bb" />
-
-## Buy Translation Coins Stripe Integration
-
-https://github.com/user-attachments/assets/5971f74d-8876-4625-930a-c14f2a773cf1
 
 ## Generate Narration Demo
 
@@ -343,4 +331,57 @@ Long bookNumber
 
 
 https://github.com/stibbm/MAWNR-Translations/assets/48364517/9c91ba0c-948f-4702-8d86-3bfe028a2034
+
+
+
+## Pricing
+
+### **Pricing Model Breakdown**
+
+| Item | Profit Margin OvO |
+| --------------------------------------------------- | ----------------------------------- |
+| Fixed Expenses Margin | +30% |
+| Service run cost | + 10% of expected API call costs (Likely to change to match true cost to run service once baseline has been established) 
+| Variability Buffer | + 10% of expected API call costs |
+| Total price to user | + 50% on top of expected API costs
+
+
+<br/>
+
+
+
+| Item                                                   |  Quantity       |   Cost          |
+| --------------------------------------------------- | ------- | ---------------------------- |
+| Translation  | 1000 tokens |     $10           | 
+| Gpt-4 | 1 million tokens | $30 |
+| Gpt-4 Translation (Korean to English) | 1 million input (untranslated) chars | $60
+| AWS Polly Narration (Neural Engine) | 1 million chars | $16
+| Internal Combined Gpt-4 Translation and Polly Narration (Neural Engine) | 1 million chars | $76
+| Combined Gpt-4 Translation and Polly Narration (Neural Engine) Price | 1 million chars | $76 * 1.5 = $114
+ 
+
+<br/>
+
+## Buy Translation Coins Stripe Integration
+
+https://github.com/user-attachments/assets/5971f74d-8876-4625-930a-c14f2a773cf1
+
+<br/>
+
+
+## User View
+
+### Sufficient Coins (Count is green colored)
+
+<img width="1792" alt="Screenshot 2025-03-14 at 11 24 50 AM" src="https://github.com/user-attachments/assets/c23accd6-1bda-496e-b794-a1fa61c6f5b0" />
+
+### Not Enough Coins (Count is red colored)
+
+<img width="1792" alt="notenoughcoinsred" src="https://github.com/user-attachments/assets/8d0418e5-1ff3-4921-b4d2-7bfda339f6bb" />
+
+## Service Diagram
+
+![abc](https://github.com/user-attachments/assets/23cba135-eb9d-4edb-b7c8-c35dcf5a98a5)
+
+
 
