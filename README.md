@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📚 Book Data Service
+# 📚 Media Orchestration Service
 
 **A comprehensive platform for managing, translating, and generating audiobooks with automated YouTube integration**
 
