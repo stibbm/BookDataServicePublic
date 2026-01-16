@@ -49,10 +49,6 @@
 
 <img width="100%" alt="ER Diagram" src="https://github.com/user-attachments/assets/f83b90de-5fd7-4d66-84e3-43c309fa6c0c" />
 
-### Service Diagram
-
-<img width="100%" alt="Service Diagram" src="https://github.com/user-attachments/assets/23cba135-eb9d-4edb-b7c8-c35dcf5a98a5" />
-
 ---
 
 ## 🎬 Demo
