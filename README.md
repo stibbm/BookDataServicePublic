@@ -1,401 +1,328 @@
+<div align="center">
 
+# 📚 Book Data Service
 
+**A comprehensive platform for managing, translating, and generating audiobooks with automated YouTube integration**
 
- 
+[![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/)
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.0-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io/projects/spring-boot)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Stripe](https://img.shields.io/badge/Stripe-008CDD?style=for-the-badge&logo=stripe&logoColor=white)](https://stripe.com/)
 
-# Book Data Service
+---
 
-| Quick Navigation                                    |                                     |
-| --------------------------------------------------- | ----------------------------------- |
-| [Design](#design)                                           | Design Docs                         |
-| [Demo](#generate-narration-demo)                    | Demo with YouTube integration       |
-| [Install](#how-to-run-full-service-and-site)        | Pre-requisites and run instructions |
-| [Version 2](#version-2)                             | Updated user interaction model      |
-| [Stripe](#buy-translation-coins-stripe-integration) | Stripe integration and coins        |
-| [Pricing](#pricing)								  | Translation token pricing breakdown	|
+[📐 Design](#-design) •
+[🎬 Demo](#-demo) •
+[🚀 Installation](#-installation) •
+[📡 API Reference](#-api-reference) •
+[💳 Stripe Integration](#-stripe-integration) •
+[💰 Pricing](#-pricing)
 
-<br/>
+</div>
 
-## Design
+---
 
-### High Level Overview
+## ✨ Features
 
-<img width="2352" height="2286" alt="c4v5png" src="https://github.com/user-attachments/assets/aa459efc-ecd0-442d-b738-90732d4d58e4" />
+- 📖 **Book & Chapter Management** — Create and organize books with image or text-based chapters
+- 🌐 **Automated Translation** — Translate content between languages using GPT-4
+- 🎙️ **Audio Narration** — Generate high-quality audio using AWS Polly Neural Engine
+- 🎥 **Video Generation** — Automatically create audiobook videos
+- 📺 **YouTube Integration** — Direct upload to YouTube with automatic metadata
+- 💎 **Token-Based Economy** — Stripe-integrated payment system for translation credits
+- 🔍 **Full-Text Search** — Search books by content and tags
 
+---
 
-### High Level System Architecture
+## 📐 Design
 
-<img width="2352" height="1314" alt="fftest2" src="https://github.com/user-attachments/assets/7c547a1e-6b50-46f9-b306-664eb218b65e" />
+### High-Level System Architecture
+
+<img width="100%" alt="System Architecture" src="https://github.com/user-attachments/assets/7c547a1e-6b50-46f9-b306-664eb218b65e" />
 
 ### Entity-Relationship Diagram
 
-<img width="2352" height="924" alt="erv5v2png" src="https://github.com/user-attachments/assets/f83b90de-5fd7-4d66-84e3-43c309fa6c0c" />
+<img width="100%" alt="ER Diagram" src="https://github.com/user-attachments/assets/f83b90de-5fd7-4d66-84e3-43c309fa6c0c" />
 
+### Service Diagram
 
-## Generate Narration Demo
+<img width="100%" alt="Service Diagram" src="https://github.com/user-attachments/assets/23cba135-eb9d-4edb-b7c8-c35dcf5a98a5" />
+
+---
+
+## 🎬 Demo
+
+### Generate Narration Demo
 
 https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44f0-b024-ffecb6f30323
 
+### Generate Audiobook for Chapter Range
 
---------------------------
+https://github.com/stibbm/BookDataServiceSQL/assets/48364517/47fde2dc-7687-4110-aa3a-ac1d9bc660cb
 
-## How to run full service and site
+### Create Book Flow
 
-**Start Local Stripe webhook**
-```
+https://github.com/stibbm/BookDataServiceSQL/assets/48364517/36601998-9836-4fec-9a89-58c705850fd7
+
+### Translate Text Chapter Flow
+
+https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-a396-3e479fa65112
+
+---
+
+## 🚀 Installation
+
+### Prerequisites
+
+- Java 17+
+- Gradle
+- Docker & Docker Compose
+- Node.js & npm
+- Stripe CLI (for payment integration)
+
+### Quick Start
+
+<details>
+<summary><b>1️⃣ Start Stripe Webhook (Optional)</b></summary>
+
+```bash
 brew install stripe/stripe-cli/stripe
 stripe login
 stripe listen --forward-to localhost:9190/stripeWebhooks
 ```
 
-------
+</details>
 
-**How to setup database first time**
+<details>
+<summary><b>2️⃣ Database Setup (First Time)</b></summary>
 
-```
-
-1. Run "docker-compose up"
-2. Set spring.jpa.hibernate.ddl-auto=create in application.properties
-3. Run "gradle bootRun" (Error messages will appear but it will run)
-4. ctrl-c kill the run
-5. Set spring.jpa.hibernate.ddl-auto=update in application.properties
-6. Run "gradle bootRun"
-7. DB is now setup correctly
-
-```
-
-***Terminal 1***
-```
-git clone git@github.com:stibbm/BookDataServiceSQL
-cd BookDataServiceSQL
-cd d2/d2
+```bash
+# Step 1: Start Docker containers
 docker-compose up
-```
 
-***Terminal 2***
-```
-cd BookDataServiceSQL
+# Step 2: Configure Hibernate for schema creation
+# Set in application.properties:
+# spring.jpa.hibernate.ddl-auto=create
+
+# Step 3: Run the application (errors are expected)
+gradle bootRun
+
+# Step 4: Stop the application (Ctrl+C)
+
+# Step 5: Switch to update mode
+# Set in application.properties:
+# spring.jpa.hibernate.ddl-auto=update
+
+# Step 6: Run again - database is now ready!
 gradle bootRun
 ```
 
--------
+</details>
 
-**BookPageContent**
+<details open>
+<summary><b>3️⃣ Running All Services</b></summary>
+
+| Terminal | Service | Commands |
+|:--------:|:--------|:---------|
+| **1** | Database | `cd BookDataServiceSQL/d2/d2 && docker-compose up` |
+| **2** | Backend API | `cd BookDataServiceSQL && gradle bootRun` |
+| **3** | Page Content | `cd BookPageContent && gradle bootRun` |
+| **4** | Frontend | `cd book-client-sql && npm install && npm run start` |
+
+</details>
+
+---
+
+## 📡 API Reference
+
+### Endpoints Overview
+
+<details>
+<summary><b>📚 Book Operations</b></summary>
+
+| Endpoint | Description |
+|:---------|:------------|
+| `CreateBook` | Create a new book |
+| `DeleteBook` | Remove a book |
+| `GetAllBooksPaged` | List books with pagination |
+| `GetAllBooksSortedPaged` | List sorted books with pagination |
+| `GetBookByBookName` | Find book by name |
+| `GetBookByBookNumber` | Find book by ID |
+| `GetBooksByBookTagPaged` | Filter by tags (paginated) |
+| `SearchBooksByBookTags` | Search by tags |
+| `SearchBooksByContent` | Full-text content search |
+
+</details>
+
+<details>
+<summary><b>📑 Chapter Operations</b></summary>
+
+| Endpoint | Description |
+|:---------|:------------|
+| `CreateChapter` | Create a new chapter |
+| `GetChapterByBookNameAndChapterNumber` | Get specific chapter |
+| `GetChapterHeadersByBookNumber` | List chapter headers |
+| `GetChaptersByBookName` | Get all chapters |
+| `GetChaptersByBookNamePaged` | Get chapters (paginated) |
+
+</details>
+
+<details>
+<summary><b>🖼️ Image Operations</b></summary>
+
+| Endpoint | Description |
+|:---------|:------------|
+| `CreateImage` | Upload an image |
+| `GetImagesByBookNameAndChapterNameAndImageNumber` | Get specific image |
+| `GetImagesByBookNameAndChapterNumberPaged` | List images (paginated) |
+
+</details>
+
+<details>
+<summary><b>🎵 Audio Operations</b></summary>
+
+| Endpoint | Description |
+|:---------|:------------|
+| `CreateAudio` | Generate audio narration |
+| `GetAudiosByBookNameAndChapterNumber` | Get chapter audio |
+
+</details>
+
+<details>
+<summary><b>👤 Account & Misc</b></summary>
+
+| Endpoint | Description |
+|:---------|:------------|
+| `CreateAccount` | Create user account |
+| `GetAccount` | Get account details |
+| `CreateBookView` | Record book view |
+| `GetBookViewsByBookNumber` | Get view analytics |
+| `PopulateGitBooks` | Seed book data |
+| `PopulateVideoData` | Seed video data |
+
+</details>
+
+### Example Request
+
+```http
+POST /createBook
+Content-Type: application/json
+Authorization: <authToken>
 ```
-git clone git@github.com:stibbm/BookPageContent
-** Terminal 1 **
-cd BookPageContent
-gradle bootRun
+
+```json
+{
+  "bookName": "wizard tower",
+  "bookDescription": "book description",
+  "bookLanguage": "Korean",
+  "bookTags": ["tag1", "tag2"],
+  "fileType": "png"
+}
 ```
 
-**book-client-sql**
-```
-git clone git@github.com:stibbm/book-client-sql
-cd book-client-sql
-npm install
-npm run start
-```
+---
 
+## 📊 Database Models
 
-## Activity Endpoints
-
-### Account
-- CreateAccount
-- GetAccount
-
-### Audio
-- CreateAudio
-- GetAudiosByBookNameAndChapterNumber
+<details>
+<summary><b>View Data Models</b></summary>
 
 ### Book
-- CreateBook
-- DeleteBook
-- GetAllBooksPaged
-- GetAllBooksSortedPaged
-- GetBookByBookName
-- GetBookByBookNumber
-- GetBooksByBookTagPaged
-- SearchBooksByBookTags
-- SearchBooksByContent
 
-### BookView
-- CreateBookView
-- GetBookViewsByBookNumber
+| Field | Type | Description |
+|:------|:-----|:------------|
+| `bookNumber` | Long | Primary Key |
+| `bookName` | String | Book title |
+| `createdBy` | String | Creator ID |
+| `bookDescription` | String | Description |
+| `bookLanguage` | String | Language code |
+| `bookViews` | Long | View count |
+| `bookThumbnail` | String | Thumbnail URL |
+| `bookTags` | Set\<String\> | Category tags |
 
 ### Chapter
-- CreateChapter
-- GetChapterByBookNameAndChapterNumber
-- GetChapterHeadersByBookNumber
-- GetChaptersByBookName
-- GetChaptersByBookNamePaged
+
+| Field | Type | Description |
+|:------|:-----|:------------|
+| `chapterId` | ChapterId | Composite PK (chapterNumber, bookNumber) |
+| `chapterName` | String | Chapter title |
+| `chapterViews` | Long | View count |
+| `createdBy` | String | Creator ID |
 
 ### Image
-- CreateImage
-- GetImagesByBookNameAndChapterNameAndImageNumber
-- GetImagesByBookNameAndChapterNumberPaged
 
-### Populate
-- PopulateGitBooks
-- PopulateVideoData
+| Field | Type | Description |
+|:------|:-----|:------------|
+| `imageId` | ImageId | Composite PK (imageNumber, chapterNumber, bookNumber) |
+| `s3Key` | String | S3 object key |
+| `s3Bucket` | String | S3 bucket name |
+| `relativeImageUrl` | String | Image URL |
+| `createdBy` | String | Creator ID |
 
+</details>
 
+---
 
-# Version 2
+## 💳 Stripe Integration
 
-1. Books with existing untranslated chapters are listed.
-2. User can add tokens to account to pay for generating next video
-3. Generated video is auto-uploaded to youtube channel: (https://www.youtube.com/channel/UCXPGNL-A07Tgrd4N-7cB1Aw) and saved to S3 as a backup since youtube api limit for video uploads is very small.
-* Note: Youtube channel is no longer up due to copyright strikes
-
-https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44f0-b024-ffecb6f30323
-
-
-## Generate audiobook for specified range of chapters from admin-created available untranslated chapters flow
-1. Click on generate video for specified chapters -> Popup chapter selection
-2. Specify start and end chapters, click submit -> display process of creating translated audiobook showing when each step completes
-     * Translating Text
-     * Creating Audio
-     * Creating Video
-     * Uploading to Youtube
-     * Completed
-  
-https://github.com/stibbm/BookDataServiceSQL/assets/48364517/47fde2dc-7687-4110-aa3a-ac1d9bc660cb
-
-## Generate audiobook in english from admin-created available untranslated chapters flow
-1. Click on generate next video button -> Confirm purchase popup button
-2. Click on yes -> display process of creating translated audiobook showing when each step completes
-     * Translating Text
-     * Creating Audio
-     * Creating Video
-     * Uploading to Youtube
-     * Completed
-
-https://github.com/stibbm/BookDataServiceSQL/assets/48364517/971740b7-38d4-40ab-a6e3-0b8e1f1bad1a
-
-# Version 1
-
-## Create Book
-* Required Fields:
-
-  * Book Name
-  * Description
-  * Tags
-  * Language
-  * Thumbnail Image
-
-## Create Chapter
-* Chapters can be either:
-
-  * Image Type
-     * Chapter Name
-     * File picker select numbered images
-  
-  * Text Type
-     * Chapter Name
-     * Text
-
-
-## Create Book Flow
-
-https://github.com/stibbm/BookDataServiceSQL/assets/48364517/36601998-9836-4fec-9a89-58c705850fd7
-
-1. Click create book -> Routes to book create page
-2. Specify book info and click create -> Create book and route to newly created book page
-3. Click add chapter -> Routes to add chapter page
-4. Select image type chapter, select numbered images, click create chapter -> Show image upload progress until completed
-5. Click continue button -> Routed to newly created image chapter page
-6. Click add chapter -> Routes to add chapter page
-7. Select text type chapter, fill fields, click create chapter -> Once chapter is created continue button will appear
-8. Click continue button -> Routes to created chapter
-9. Click read first chapter button -> Routes to first chapter created
-10. Click read last chapter button -> Routes to most recent chapter created
-
-
-## Translate Text Chapter Flow
-
-
-https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-a396-3e479fa65112
-
--> Starting from created text chapter page
-1. Click translate chapter button -> Route to create chapter translation page
-2. Specify language to translate to and name for the translated chapter, click submit -> Display spinwheel loader until completed, then route to the created translated chapter page
-3. Click generate audio button -> button updates showing process has started. Once completed, page updates to contain audio player for the generated audio and a download button
-
-
-
-1. Create text chapter in Korean
-3. Generate english translation
-4. Generate audio file reading translation aloud  
-5. Generate video file reading translation aloud with book thumbnail as background
-
-
-### How to run
-1. clone BookDataServiceSQL
-   * Run "docker-compose up" in d2/d2 directory
-   * Run "gradle bootRun" in base directory of repo
-2. clone BookPageContent
-   * Run "gradle bootRun" in base directory of repo
-3. clone book-client-sql
-   * Run "npm install"
-   * Run "npm run start"
-4. clone bookpy
-   * Run "python3 m.py" to autopopulate backend data
-     * Populates data for existing videos in specified playlists for connected youtube account
-     * Populates data for which chapters remain unstranslated and are available to generate videos for
-
-## Endpoints
-### CreateBookActivity
-#### CreateBookRequest 
-* String bookName
-* String bookDescription
-* String bookLanguage
-* Set<String> bookTags
-* byte[] bookThumbnailImageBytes;
-* String fileType;
-<br/>
-
-### 1. ** Create Book **
-
-**Endpoint**: `POST /createBook`  
-**Description**: Create a new book
-
-- **Headers**  
-  - `Content-Type: application/json`
-  - `Authorization: <authToken>`
-
-- **Body**
-    ```json
-    {
-      "bookName": "wizard tower",
-      "bookDescription": "book description",
-      "bookLanguage": "Korean",
-      "bookTags": ["tag1", "tag2"],
-      "fileType": "png"
-    }
-    ```
-  
-### GetAllBooksPagedActivity
-#### GetAllBooksPagedRequest
--- Note: being passed as strings and parsed into integer so any formatting errors in values don't cause an error from spring boot and can be handled within this code
-* String pageNumber
-* String pageSize
-<br/>
-  
-### GetAllBooksSortedPagedActivity
-#### GetAllBooksSortedPagedRequest
-* String sortType (BOOK_VIEWS, CREATION_TIME, BOOK_NAME)
-* String pageNumber
-* String pageSize
-<br/>
-  
-### GetBookByNameActivity
-#### GetBookByNameRequest
-* String bookName
-<br/>
-
-  
-### GetBookByBookNumberActivity
-#### GetBookByBookNumberRequest
-* Long bookNumber
-<br/>
-  
-# Database Models
-## Book
-@Id  
-Long bookNumber  
-  
-String bookName  
-String createdBy  
-String bookDescription  
-String bookLanguage  
-Long bookViews  
-String bookThumbnail  
-Set<String> bookTags  
-
-
-## Chapter
-@Id  
-ChapterId chapterId  
-
-String chapterName  
-Long chapterViews  
-String createdBy  
-
-### ChapterId
-Long chapterNumber;  
-Long bookNumber;  
-
-## Image
-@Id  
-ImageId imageId  
-  
-String s3Key  
-String s3Bucket  
-String relativeImageUrl  
-String createdBy  
-
-### ImageId
-Long imageNumber  
-Long chapterNumber  
-Long bookNumber  
-
-  
-
-
-
-
-https://github.com/stibbm/MAWNR-Translations/assets/48364517/9c91ba0c-948f-4702-8d86-3bfe028a2034
-
-
-
-## Pricing
-
-### **Pricing Model Breakdown**
-
-| Item | Profit Margin OvO |
-| --------------------------------------------------- | ----------------------------------- |
-| Fixed Expenses Margin | +30% |
-| Service run cost | + 10% of expected API call costs (Likely to change to match true cost to run service once baseline has been established) 
-| Variability Buffer | + 10% of expected API call costs |
-| Total price to user | + 50% on top of expected API costs
-
-
-<br/>
-
-
-
-| Item                                                   |  Quantity       |   Cost          |
-| --------------------------------------------------- | ------- | ---------------------------- |
-| Translation  | 1000 tokens |     $10           | 
-| Gpt-4 | 1 million tokens | $30 |
-| Gpt-4 Translation (Korean to English) | 1 million input (untranslated) chars | $60
-| AWS Polly Narration (Neural Engine) | 1 million chars | $16
-| Internal Combined Gpt-4 Translation and Polly Narration (Neural Engine) | 1 million chars | $76
-| Combined Gpt-4 Translation and Polly Narration (Neural Engine) Price | 1 million chars | $76 * 1.5 = $114
- 
-
-<br/>
-
-## Buy Translation Coins Stripe Integration
+Seamless token purchase flow for translation credits:
 
 https://github.com/user-attachments/assets/5971f74d-8876-4625-930a-c14f2a773cf1
 
-<br/>
+### User Interface
 
+| Sufficient Coins | Insufficient Coins |
+|:----------------:|:------------------:|
+| <img width="400" alt="Sufficient Coins" src="https://github.com/user-attachments/assets/c23accd6-1bda-496e-b794-a1fa61c6f5b0" /> | <img width="400" alt="Not Enough Coins" src="https://github.com/user-attachments/assets/8d0418e5-1ff3-4921-b4d2-7bfda339f6bb" /> |
+| *Green indicator* | *Red indicator* |
 
-## User View
+---
 
-### Sufficient Coins (Count is green colored)
+## 💰 Pricing
 
-<img width="1792" alt="Screenshot 2025-03-14 at 11 24 50 AM" src="https://github.com/user-attachments/assets/c23accd6-1bda-496e-b794-a1fa61c6f5b0" />
+### Pricing Model
 
-### Not Enough Coins (Count is red colored)
+| Component | Margin |
+|:----------|:------:|
+| Fixed Expenses | +30% |
+| Service Runtime | +10% |
+| Variability Buffer | +10% |
+| **Total Markup** | **+50%** |
 
-<img width="1792" alt="notenoughcoinsred" src="https://github.com/user-attachments/assets/8d0418e5-1ff3-4921-b4d2-7bfda339f6bb" />
+### Service Costs
 
-## Service Diagram
+| Service | Unit | Cost |
+|:--------|:-----|-----:|
+| Translation Tokens | 1,000 tokens | $10 |
+| GPT-4 | 1M tokens | $30 |
+| GPT-4 Translation (KO→EN) | 1M chars | $60 |
+| AWS Polly Neural | 1M chars | $16 |
+| Combined Translation + Narration | 1M chars | $76 |
+| **User Price (incl. markup)** | 1M chars | **$114** |
 
-![abc](https://github.com/user-attachments/assets/23cba135-eb9d-4edb-b7c8-c35dcf5a98a5)
+---
 
+## 📌 Version History
 
+### Version 2 (Current)
 
+- ✅ Browse books with existing untranslated chapters
+- ✅ Token-based payment system for video generation
+- ✅ Auto-upload to YouTube + S3 backup
+- ✅ Range-based chapter audiobook generation
+
+### Version 1
+
+- ✅ Create books with metadata and thumbnails
+- ✅ Image-type and text-type chapters
+- ✅ Translation workflow
+- ✅ Audio generation with AWS Polly
+
+---
+
+<div align="center">
+
+**Made with ❤️ for book lovers**
+
+</div>
