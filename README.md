@@ -37,7 +37,11 @@
 
 ## 📐 Design
 
-### High-Level System Architecture
+### High-Level Overview
+
+<img width="100%" alt="C4 Diagram" src="https://github.com/user-attachments/assets/aa459efc-ecd0-442d-b738-90732d4d58e4" />
+
+### System Architecture
 
 <img width="100%" alt="System Architecture" src="https://github.com/user-attachments/assets/7c547a1e-6b50-46f9-b306-664eb218b65e" />
 
@@ -53,7 +57,7 @@
 
 ## 🎬 Demo
 
-### Generate Narration Demo
+### Generate Narration
 
 https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44f0-b024-ffecb6f30323
 
@@ -311,6 +315,8 @@ https://github.com/user-attachments/assets/5971f74d-8876-4625-930a-c14f2a773cf1
 - ✅ Token-based payment system for video generation
 - ✅ Auto-upload to YouTube + S3 backup
 - ✅ Range-based chapter audiobook generation
+
+> **Note:** YouTube channel is no longer active due to copyright strikes
 
 ### Version 1
 
