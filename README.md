@@ -59,15 +59,16 @@ https://github.com/stibbm/BookDataServicePublic/assets/48364517/b4e106a1-ad70-44
 
 ### Generate Audiobook for Chapter Range
 
-https://github.com/stibbm/BookDataServiceSQL/assets/48364517/47fde2dc-7687-4110-aa3a-ac1d9bc660cb
+https://github.com/user-attachments/assets/74cb5184-8cb0-4344-b81c-1737b829e538
 
 ### Create Book Flow
 
-https://github.com/stibbm/BookDataServiceSQL/assets/48364517/36601998-9836-4fec-9a89-58c705850fd7
+https://github.com/user-attachments/assets/9aa938a8-057c-4fb2-a85a-f318b9d0fa89
 
 ### Translate Text Chapter Flow
 
-https://github.com/stibbm/BookDataServiceSQL/assets/48364517/5d97f0b9-4df8-4872-a396-3e479fa65112
+https://github.com/user-attachments/assets/e4b00e6c-27ea-4464-91b9-87d0c2fb911d
+
 
 ---
 
