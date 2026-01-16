@@ -18,6 +18,11 @@
 
 ## Design
 
+### High Level Overview
+
+<img width="2352" height="2286" alt="c4v5png" src="https://github.com/user-attachments/assets/aa459efc-ecd0-442d-b738-90732d4d58e4" />
+
+
 ### High Level System Architecture
 
 <img width="2352" height="1314" alt="fftest2" src="https://github.com/user-attachments/assets/7c547a1e-6b50-46f9-b306-664eb218b65e" />
