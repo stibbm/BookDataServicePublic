@@ -7,6 +7,7 @@
 
 | Quick Navigation                                    |                                     |
 | --------------------------------------------------- | ----------------------------------- |
+| [Design](#design)                                           | Design Docs                         |
 | [Demo](#generate-narration-demo)                    | Demo with YouTube integration       |
 | [Install](#how-to-run-full-service-and-site)        | Pre-requisites and run instructions |
 | [Version 2](#version-2)                             | Updated user interaction model      |
@@ -15,7 +16,15 @@
 
 <br/>
 
+## Design
 
+### High Level System Architecture
+
+<img width="2352" height="1314" alt="fftest2" src="https://github.com/user-attachments/assets/7c547a1e-6b50-46f9-b306-664eb218b65e" />
+
+### Entity-Relationship Diagram
+
+<img width="2352" height="876" alt="ERv4-png" src="https://github.com/user-attachments/assets/c4dfb024-ae98-42f0-9cce-2601656f9df0" />
 
 
 ## Generate Narration Demo
