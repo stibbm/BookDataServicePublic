@@ -24,7 +24,7 @@
 
 ### Entity-Relationship Diagram
 
-<img width="2352" height="876" alt="ERv4-png" src="https://github.com/user-attachments/assets/c4dfb024-ae98-42f0-9cce-2601656f9df0" />
+<img width="2352" height="924" alt="erv5v2png" src="https://github.com/user-attachments/assets/f83b90de-5fd7-4d66-84e3-43c309fa6c0c" />
 
 
 ## Generate Narration Demo
