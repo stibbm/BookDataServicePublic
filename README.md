@@ -313,7 +313,7 @@ https://github.com/user-attachments/assets/5971f74d-8876-4625-930a-c14f2a773cf1
 - ✅ Auto-upload to YouTube + S3 backup
 - ✅ Range-based chapter audiobook generation
 
-> **Note:** YouTube channel is no longer active due to copyright strikes
+> **Note:** Public deployment was sunset due to content licensing constraints
 
 ### Version 1
 
